@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Card</title>
+</head>
+<body>
+<table border="1">
+    <tr>
+        <th>Id</th>
+        <th>Issue date</th>
+        <th>Expiration date</th>
+        <th>Cardholder id</th>
+    </tr>
+    <div>
+        <tr>
+            <td th:text="${card.id}"></td>
+            <td th:text="${card.issueDate}"></td>
+            <td th:text="${card.expirationDate}"></td>
+            <td><a th:href="@{/cardholder/{id}(id=${card.getCardholderId()})}" th:text="${card.getCardholderId()}"></a></td>
+        </tr>
+    </div>
+</table><br>
+<form th:method="GET" th:action="@{/card/{id}/delete(id=${card.getId()})}">
+    <input style='width: 250px; border-radius: 8px; background-color: #4CAF50; '
+           type="submit" value="Delete" >
+</form>
+</body>
+</html>

@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="POJO1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/out/artifacts/Entity/Entity.jar!/Server/POJO" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

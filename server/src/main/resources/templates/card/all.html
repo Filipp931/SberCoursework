@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" >
+    <title>AllCards</title>
+</head>
+<body>
+<table border="1">
+    <tr>
+        <th>ID</th>
+        <th>Number</th>
+        <th>Issue Date</th>
+        <th>Expiration Date</th>
+        <th>Cardholder ID</th>
+    </tr>
+    <div th:each="card : ${cards}">
+        <tr>
+            <td><a th:href="@{/card/{id}(id=${card.getId()})}" th:text="${card.getId()}"></a></td>
+            <td><p th:text="${card.getNumber()}"></p></td>
+            <td><p th:text="${card.getIssueDate()}"></p></td>
+            <td><p th:text="${card.getExpirationDate()}"></p></td>
+            <td><a th:href="@{/cardholder/{id}(id=${card.getCardholderId()})}" th:text="${card.getCardholderId()}"></a></td>
+        </tr>
+    </div>
+</table>
+
+</body>
+</html>

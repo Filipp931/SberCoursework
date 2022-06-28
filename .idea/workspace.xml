@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="Entity" />
+    </artifacts-to-build>
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="aa02383d-1c32-45fb-b314-87073e6c7512" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="2BC8xmBXvFSd0CJB1UshPZmfPAv" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ExpandSpringBootJavaOptionsPanel" value="true" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/out/artifacts/Entity/Entity.jar" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Global Libraries" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2229259" />
+  </component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\admin\Desktop\Java sber\MailerServer\Server\src\main\resources\templates\card" />
+      <recent name="C:\Users\admin\Desktop\Java sber\MailerServer\Server\src\main\resources\templates\cardholder" />
+      <recent name="C:\Users\admin\Desktop\Java sber\MailerServer\Server\src\main\resources\templates" />
+      <recent name="C:\Users\admin\Desktop\Java sber\MailerServer\Server\src\main\resources" />
+      <recent name="C:\Users\admin\Desktop\Java sber\MailerServer\Server\src\main\java\ru\sber\service\exceptions" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\admin\Desktop\Java sber\MailerServer\mailer\src\main\resources" />
+      <recent name="C:\Users\admin\Desktop\Java sber\MailerServer" />
+      <recent name="C:\Users\admin\Desktop\Java sber\MailerServer\server\src\main\resources\templates" />
+      <recent name="C:\Users\admin\Desktop\Java sber\MailerServer\server\src\main\WEB-INF" />
+      <recent name="C:\Users\admin\Desktop\Java sber\MailerServer\server\src\main" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="ru.sber" />
+      <recent name="ru.sber.controller" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.Mailer">
+    <configuration name="Mailer" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="mailer" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="mailer.Mailer" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Server" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="server" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="Server.main.Server" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="ALTERNATIVE_JRE_PATH" value="corretto-11 (2)" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Spring Boot.Server" />
+      <item itemvalue="Spring Boot.Mailer" />
+    </list>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="aa02383d-1c32-45fb-b314-87073e6c7512" name="Default Changelist" comment="" />
+      <created>1656398957036</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1656398957036</updated>
+      <workItem from="1656398958290" duration="238000" />
+      <workItem from="1656399222265" duration="2014000" />
+      <workItem from="1656401286518" duration="858000" />
+      <workItem from="1656402177658" duration="866000" />
+      <workItem from="1656405318786" duration="1735000" />
+      <workItem from="1656407094016" duration="664000" />
+      <workItem from="1656407788288" duration="5017000" />
+      <workItem from="1656412887701" duration="5009000" />
+      <workItem from="1656417974569" duration="632000" />
+      <workItem from="1656418632894" duration="1120000" />
+      <workItem from="1656419783054" duration="2853000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

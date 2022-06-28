@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Cardholder</title>
+</head>
+<table border="1">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Surname</th>
+        <th>Patronymic</th>
+        <th>Email</th>
+        <th>Phone number</th>
+    </tr>
+    <div>
+        <tr>
+            <td th:text="${cardholder.id}"></td>
+            <td th:text="${cardholder.name}"></td>
+            <td th:text="${cardholder.surname}"></td>
+            <td th:text="${cardholder.patronymic}"></td>
+            <td th:text="${cardholder.email}"></td>
+            <td th:text="${cardholder.phoneNumber}"></td>
+        </tr>
+    </div>
+</table><br>
+<form th:method="GET" th:action="@{/cardholder/{id}/update(id=${cardholder.getId()})}">
+    <input style='width: 250px; border-radius: 8px; background-color: #4CAF50; '
+           type="submit" value="Edit" >
+</form><br>
+<form th:method="GET" th:action="@{/card/addNewCard{id}(id=${cardholder.getId()})}">
+    <input style='width: 250px; border-radius: 8px; background-color: #4CAF50; '
+           type="submit" value="Add new card" >
+</form><br>
+<form th:method="GET" th:action="@{/cardholder/{id}/cards(id=${cardholder.getId()})}">
+    <input style='width: 250px; border-radius: 8px; background-color: #4CAF50; '
+           type="submit" value="Display cards" >
+</form>
+
+
+</html>

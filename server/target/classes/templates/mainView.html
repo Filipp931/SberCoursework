@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <meta charset="UTF-8">
+    <title>Bank Server</title>
+</head>
+<body>
+<form th:method="GET" th:action="@{cardholder/all}">
+        <input style="width: 250px; border-radius: 8px; background-color: #4CAF50;"
+           type="submit" value="All cardholders">
+</form >
+<br>
+<form th:method="GET" th:action="@{card/all}">
+    <input style='width: 250px; border-radius: 8px; background-color: #4CAF50; '
+           type="submit" value="All cards" >
+</form >
+
+
+</body>
+</html>

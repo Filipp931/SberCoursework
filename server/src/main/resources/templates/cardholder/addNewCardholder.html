@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>New cardholder</title>
+</head>
+<body>
+
+<form th:method="POST" th:action="@{/cardholder/create}" th:object="${cardholder}">
+    <label for="name">Cardholder name: </label>
+    <input type="text" th:field="*{name}" id="name"/>
+    <div style="color: red" th:if="${#fields.hasAnyErrors()}" th:errors="*{name}"></div>
+    <br/>
+    <label for="surname">Cardholder surname: </label>
+    <input type="text" th:field="*{surname}" id="surname"/>
+    <div style="color: red" th:if="${#fields.hasErrors('surname')}" th:errors="*{surname}"></div>
+    <br/>
+    <label for="patronymic">Cardholder patronymic: </label>
+    <input type="text" th:field="*{patronymic}" id="patronymic"/>
+    <div style="color: red" th:if="${#fields.hasErrors('patronymic')}" th:errors="*{patronymic}"></div>
+    <br/>
+    <label for="phoneNumber">Cardholder phoneNumber: </label>
+    <input type="text" th:field="*{phoneNumber}" id="phoneNumber"/>
+    <div style="color: red" th:if="${#fields.hasErrors('phoneNumber')}" th:errors="*{phoneNumber}"></div>
+    <br/>
+    <label for="email">Cardholder email: </label>
+    <input type="text" th:field="*{email}" id="email"/>
+    <div style="color: red" th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></div>
+    <br/>
+    <input type="submit" value="Create">
+</form>
+
+</body>
+</html>

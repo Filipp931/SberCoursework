@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>New card</title>
+</head>
+<body>
+
+<form th:method="POST" th:action="@{/card/create}" th:object="${card}">
+    <label for="number">Enter card number: </label>
+    <input type="number" th:field="*{number}" id="number"/>
+    <br/>
+    <label for="expirationDate">Expiration date: </label>
+    <input type="date" th:field="*{expirationDate}" id="expirationDate"/>
+    <br>
+    <label for="cardholderId">Cardholder Id: </label>
+    <input type="number" th:field="*{cardholderId}" id="cardholderId"/>
+    <br>
+    <input style='width: 250px; border-radius: 8px; background-color: #4CAF50; '
+            type="submit" value="Create">
+</form>
+</body>
+</html>

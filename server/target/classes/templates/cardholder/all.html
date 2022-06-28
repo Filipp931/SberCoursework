@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>AllCardholder</title>
+</head>
+<body>
+<form th:method="GET" th:action="@{/cardholder/addNewCardholder}">
+    <input style='width: 250px; border-radius: 8px; background-color: #4CAF50; '
+           type="submit" value="Add new Cardholder" >
+</form > <br>
+<table border="1">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Surname</th>
+        <th>Patronymic</th>
+        <th>Email</th>
+        <th>Phone number</th>
+    </tr>
+    <div th:each="cardholder : ${cardholders}">
+        <tr>
+            <td><a th:href="@{/cardholder/{id}(id=${cardholder.getId()})}" th:text="${cardholder.getId()}"></a></td>
+            <td><a th:href="@{/cardholder/{id}(id=${cardholder.getId()})}" th:text="${cardholder.getName()}"></a></td>
+            <td><a th:href="@{/cardholder/{id}(id=${cardholder.getId()})}" th:text="${cardholder.getSurname()}"></a></td>
+            <td><a th:href="@{/cardholder/{id}(id=${cardholder.getId()})}" th:text="${cardholder.getPatronymic()}"></a></td>
+            <td><p th:text="${cardholder.getEmail()}"></p></td>
+            <td><p th:text="${cardholder.getPhoneNumber()}"></p></a></td>
+        </tr>
+    </div>
+</table>
+</body>
+</html>
