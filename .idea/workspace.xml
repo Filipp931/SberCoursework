@@ -10,31 +10,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aa02383d-1c32-45fb-b314-87073e6c7512" name="Default Changelist" comment="init">
-      <change afterPath="$PROJECT_DIR$/mailer/src/main/resources/Log4j2.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mailer/src/test/java/mailer/DAO/CardDaoTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mailer/src/test/java/mailer/messageSender/EmailSenderServiceImplTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mailer/src/test/java/mailer/messageSender/MessageTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mailer/src/test/java/mailer/service/MailerServiceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mailer/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mailer/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mailer/src/main/java/mailer/DAO/CardDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/mailer/src/main/java/mailer/DAO/CardDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mailer/src/main/java/mailer/Mailer.java" beforeDir="false" afterPath="$PROJECT_DIR$/mailer/src/main/java/mailer/Mailer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mailer/src/main/java/mailer/config/GsonConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/mailer/src/main/java/mailer/config/GsonConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mailer/src/main/java/mailer/sender/EmailEmailSenderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/mailer/src/main/java/mailer/messageSender/EmailSenderServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mailer/src/main/java/mailer/sender/EmailSenderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/mailer/src/main/java/mailer/messageSender/EmailSenderService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mailer/src/main/java/mailer/sender/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/mailer/src/main/java/mailer/messageSender/Message.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mailer/src/main/java/mailer/service/MailerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/mailer/src/main/java/mailer/service/MailerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mailer/target/classes/mailer/DAO/CardDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/mailer/target/classes/mailer/DAO/CardDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mailer/target/classes/mailer/Mailer.class" beforeDir="false" afterPath="$PROJECT_DIR$/mailer/target/classes/mailer/Mailer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mailer/target/classes/mailer/sender/EmailEmailSenderServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mailer/target/classes/mailer/sender/EmailSenderService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mailer/target/classes/mailer/sender/Message.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mailer/target/classes/mailer/service/MailerService.class" beforeDir="false" afterPath="$PROJECT_DIR$/mailer/target/classes/mailer/service/MailerService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/server/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/Server/controller/CardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/Server/controller/CardController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/resources/log4j.properties" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/resources/log4j2.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/target/classes/log4j.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mailer/src/test/java/mailer/messageSender/EmailSenderServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/mailer/src/test/java/mailer/messageSender/EmailSenderServiceImplTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mailer/target/classes/mailer/config/GsonConfiguration$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/mailer/target/classes/mailer/config/GsonConfiguration$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mailer/target/classes/mailer/config/GsonConfiguration$CardDeserializer.class" beforeDir="false" afterPath="$PROJECT_DIR$/mailer/target/classes/mailer/config/GsonConfiguration$CardDeserializer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mailer/target/classes/mailer/config/GsonConfiguration.class" beforeDir="false" afterPath="$PROJECT_DIR$/mailer/target/classes/mailer/config/GsonConfiguration.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/target/classes/Server/controller/CardController.class" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/classes/Server/controller/CardController.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,7 +94,7 @@
       <command value="mvn dependency:tree" />
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.Server">
+  <component name="RunManager" selected="Spring Boot.Mailer">
     <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -159,6 +140,38 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="EmailSenderServiceImplTest.createFileTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="mailer" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="mailer.messageSender.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="mailer.messageSender" />
+      <option name="MAIN_CLASS_NAME" value="mailer.messageSender.EmailSenderServiceImplTest" />
+      <option name="METHOD_NAME" value="createFileTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EmailSenderServiceImplTest.sendMessageTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="mailer" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="mailer.messageSender.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="mailer.messageSender" />
+      <option name="MAIN_CLASS_NAME" value="mailer.messageSender.EmailSenderServiceImplTest" />
+      <option name="METHOD_NAME" value="sendMessageTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="MailerServiceTest.checkCardAndNotifyCardholdersNoExpiredCardsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="mailer" />
       <extension name="coverage">
@@ -170,38 +183,6 @@
       <option name="PACKAGE_NAME" value="mailer.service" />
       <option name="MAIN_CLASS_NAME" value="mailer.service.MailerServiceTest" />
       <option name="METHOD_NAME" value="checkCardAndNotifyCardholdersNoExpiredCardsTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MailerServiceTest.checkCardAndNotifyCardholdersTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="mailer" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="mailer.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="mailer.service" />
-      <option name="MAIN_CLASS_NAME" value="mailer.service.MailerServiceTest" />
-      <option name="METHOD_NAME" value="checkCardAndNotifyCardholdersTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MessageTest.messageTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="mailer" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="mailer.messageSender.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="mailer.messageSender" />
-      <option name="MAIN_CLASS_NAME" value="mailer.messageSender.MessageTest" />
-      <option name="METHOD_NAME" value="messageTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -227,19 +208,19 @@
     <list>
       <item itemvalue="Spring Boot.Server" />
       <item itemvalue="Spring Boot.Mailer" />
-      <item itemvalue="JUnit.MessageTest.messageTest" />
       <item itemvalue="JUnit.MailerServiceTest.checkCardAndNotifyCardholdersNoExpiredCardsTest" />
-      <item itemvalue="JUnit.MailerServiceTest.checkCardAndNotifyCardholdersTest" />
       <item itemvalue="JUnit.CardDaoTest.getAllExpiredCardsTest" />
       <item itemvalue="JUnit.CardDaoTest.init" />
+      <item itemvalue="JUnit.EmailSenderServiceImplTest.createFileTest" />
+      <item itemvalue="JUnit.EmailSenderServiceImplTest.sendMessageTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.EmailSenderServiceImplTest.sendMessageTest" />
+        <item itemvalue="JUnit.EmailSenderServiceImplTest.createFileTest" />
         <item itemvalue="JUnit.CardDaoTest.getAllExpiredCardsTest" />
         <item itemvalue="JUnit.CardDaoTest.init" />
         <item itemvalue="JUnit.MailerServiceTest.checkCardAndNotifyCardholdersNoExpiredCardsTest" />
-        <item itemvalue="JUnit.MailerServiceTest.checkCardAndNotifyCardholdersTest" />
-        <item itemvalue="JUnit.MessageTest.messageTest" />
       </list>
     </recent_temporary>
   </component>
@@ -263,7 +244,7 @@
       <workItem from="1656418632894" duration="1120000" />
       <workItem from="1656419783054" duration="10018000" />
       <workItem from="1656479152444" duration="11652000" />
-      <workItem from="1656491336178" duration="20639000" />
+      <workItem from="1656491336178" duration="21919000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1656422855772</created>
@@ -272,7 +253,14 @@
       <option name="project" value="LOCAL" />
       <updated>1656422855772</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="init">
+      <created>1656515965164</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1656515965164</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -301,6 +289,16 @@
           <url>file://$PROJECT_DIR$/mailer/src/main/java/mailer/DAO/CardDao.java</url>
           <line>41</line>
           <option name="timeStamp" value="25" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/mailer/src/main/java/mailer/messageSender/EmailSenderServiceImpl.java</url>
+          <line>15</line>
+          <option name="timeStamp" value="33" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/mailer/src/test/java/mailer/messageSender/EmailSenderServiceImplTest.java</url>
+          <line>33</line>
+          <option name="timeStamp" value="34" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
