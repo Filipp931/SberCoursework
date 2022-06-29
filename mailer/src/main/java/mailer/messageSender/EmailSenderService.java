@@ -1,4 +1,4 @@
-package mailer.sender;
+package mailer.messageSender;
 
 public interface EmailSenderService {
     /**

@@ -5,6 +5,8 @@ import Server.service.CardService;
 import Server.service.exceptions.CardAlreadyExistsException;
 import Server.service.exceptions.CardNotFoundException;
 import Server.service.exceptions.CardholderNotFoundException;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.core.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -13,8 +15,7 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping( "/card")
 @Controller
 public class CardController {
-    final
-    CardService cardService;
+    final CardService cardService;
 
     @Autowired
     public CardController(CardService cardService) {

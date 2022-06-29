@@ -9,7 +9,33 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aa02383d-1c32-45fb-b314-87073e6c7512" name="Default Changelist" comment="" />
+    <list default="true" id="aa02383d-1c32-45fb-b314-87073e6c7512" name="Default Changelist" comment="init">
+      <change afterPath="$PROJECT_DIR$/mailer/src/main/resources/Log4j2.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mailer/src/test/java/mailer/DAO/CardDaoTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mailer/src/test/java/mailer/messageSender/EmailSenderServiceImplTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mailer/src/test/java/mailer/messageSender/MessageTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mailer/src/test/java/mailer/service/MailerServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mailer/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mailer/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mailer/src/main/java/mailer/DAO/CardDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/mailer/src/main/java/mailer/DAO/CardDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mailer/src/main/java/mailer/Mailer.java" beforeDir="false" afterPath="$PROJECT_DIR$/mailer/src/main/java/mailer/Mailer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mailer/src/main/java/mailer/config/GsonConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/mailer/src/main/java/mailer/config/GsonConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mailer/src/main/java/mailer/sender/EmailEmailSenderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/mailer/src/main/java/mailer/messageSender/EmailSenderServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mailer/src/main/java/mailer/sender/EmailSenderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/mailer/src/main/java/mailer/messageSender/EmailSenderService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mailer/src/main/java/mailer/sender/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/mailer/src/main/java/mailer/messageSender/Message.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mailer/src/main/java/mailer/service/MailerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/mailer/src/main/java/mailer/service/MailerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mailer/target/classes/mailer/DAO/CardDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/mailer/target/classes/mailer/DAO/CardDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mailer/target/classes/mailer/Mailer.class" beforeDir="false" afterPath="$PROJECT_DIR$/mailer/target/classes/mailer/Mailer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mailer/target/classes/mailer/sender/EmailEmailSenderServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mailer/target/classes/mailer/sender/EmailSenderService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mailer/target/classes/mailer/sender/Message.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mailer/target/classes/mailer/service/MailerService.class" beforeDir="false" afterPath="$PROJECT_DIR$/mailer/target/classes/mailer/service/MailerService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/server/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/Server/controller/CardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/Server/controller/CardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/resources/log4j.properties" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/resources/log4j2.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/target/classes/log4j.properties" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -19,10 +45,15 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="2BC8xmBXvFSd0CJB1UshPZmfPAv" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -37,9 +68,12 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
+    <property name="create.test.in.the.same.root" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/out/artifacts/Entity/Entity.jar" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Global Libraries" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2229259" />
   </component>
@@ -61,12 +95,118 @@
       <recent name="C:\Users\admin\Desktop\Java sber\MailerServer\server\src\main\WEB-INF" />
       <recent name="C:\Users\admin\Desktop\Java sber\MailerServer\server\src\main" />
     </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="mailer.service" />
+      <recent name="mailer.sender" />
+      <recent name="mailer.DAO" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="ru.sber" />
       <recent name="ru.sber.controller" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.Mailer">
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn dependency:tree" />
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.Server">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CardDaoTest.getAllExpiredCardsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="mailer" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="mailer.DAO.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="mailer.DAO" />
+      <option name="MAIN_CLASS_NAME" value="mailer.DAO.CardDaoTest" />
+      <option name="METHOD_NAME" value="getAllExpiredCardsTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CardDaoTest.init" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="mailer" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="mailer.DAO.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="mailer.DAO" />
+      <option name="MAIN_CLASS_NAME" value="mailer.DAO.CardDaoTest" />
+      <option name="METHOD_NAME" value="init" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MailerServiceTest.checkCardAndNotifyCardholdersNoExpiredCardsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="mailer" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="mailer.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="mailer.service" />
+      <option name="MAIN_CLASS_NAME" value="mailer.service.MailerServiceTest" />
+      <option name="METHOD_NAME" value="checkCardAndNotifyCardholdersNoExpiredCardsTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MailerServiceTest.checkCardAndNotifyCardholdersTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="mailer" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="mailer.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="mailer.service" />
+      <option name="MAIN_CLASS_NAME" value="mailer.service.MailerServiceTest" />
+      <option name="METHOD_NAME" value="checkCardAndNotifyCardholdersTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MessageTest.messageTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="mailer" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="mailer.messageSender.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="mailer.messageSender" />
+      <option name="MAIN_CLASS_NAME" value="mailer.messageSender.MessageTest" />
+      <option name="METHOD_NAME" value="messageTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Mailer" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="mailer" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="mailer.Mailer" />
@@ -87,7 +227,21 @@
     <list>
       <item itemvalue="Spring Boot.Server" />
       <item itemvalue="Spring Boot.Mailer" />
+      <item itemvalue="JUnit.MessageTest.messageTest" />
+      <item itemvalue="JUnit.MailerServiceTest.checkCardAndNotifyCardholdersNoExpiredCardsTest" />
+      <item itemvalue="JUnit.MailerServiceTest.checkCardAndNotifyCardholdersTest" />
+      <item itemvalue="JUnit.CardDaoTest.getAllExpiredCardsTest" />
+      <item itemvalue="JUnit.CardDaoTest.init" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.CardDaoTest.getAllExpiredCardsTest" />
+        <item itemvalue="JUnit.CardDaoTest.init" />
+        <item itemvalue="JUnit.MailerServiceTest.checkCardAndNotifyCardholdersNoExpiredCardsTest" />
+        <item itemvalue="JUnit.MailerServiceTest.checkCardAndNotifyCardholdersTest" />
+        <item itemvalue="JUnit.MessageTest.messageTest" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -107,11 +261,48 @@
       <workItem from="1656412887701" duration="5009000" />
       <workItem from="1656417974569" duration="632000" />
       <workItem from="1656418632894" duration="1120000" />
-      <workItem from="1656419783054" duration="2853000" />
+      <workItem from="1656419783054" duration="10018000" />
+      <workItem from="1656479152444" duration="11652000" />
+      <workItem from="1656491336178" duration="20639000" />
     </task>
+    <task id="LOCAL-00001" summary="init">
+      <created>1656422855772</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1656422855772</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="init" />
+    <option name="LAST_COMMIT_MESSAGE" value="init" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/mailer/src/main/java/mailer/DAO/CardDao.java</url>
+          <line>41</line>
+          <option name="timeStamp" value="25" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

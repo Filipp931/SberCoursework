@@ -1,4 +1,4 @@
-package mailer.sender;
+package mailer.messageSender;
 
 import Server.POJO.Card;
 
