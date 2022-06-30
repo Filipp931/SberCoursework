@@ -71,7 +71,6 @@ class CardholderServiceTest {
 
     @Test
     void getCardsOfNotExistsCardholder() {
-        when(cardholderRepository.findById(1L)).thenReturn(null); //todo
         assertThrows(CardholderNotFoundException.class, () -> cardholderService.getCards(1L));
     }
 
