@@ -53,14 +53,15 @@ public class GsonConfiguration {
             Card card = new Card();
             card.setIssueDate(jsonObject.get("issueDate").getAsString());
             card.setExpirationDate(jsonObject.get("expirationDate").getAsString());
-
-
             card.setNumber(jsonObject.get("number").getAsLong());
             card.setId(jsonObject.get("id").getAsLong());
             JsonElement cardholderJson = jsonObject.get("cardholder");
-            Cardholder cardholder  = gsonBuilder.setExclusionStrategies(
-                    exclusionStrategy()).create().fromJson(cardholderJson,
-                    TypeToken.get(Cardholder.class).getType());
+            Cardholder cardholder  = gsonBuilder.
+                    setExclusionStrategies(
+                        exclusionStrategy()).
+                        create().
+                        fromJson(cardholderJson,
+                                 TypeToken.get(Cardholder.class).getType());
             card.setCardholder(cardholder);
             return card;
         }
