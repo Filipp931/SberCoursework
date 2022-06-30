@@ -75,7 +75,7 @@ public class CardholderServiceImpl implements CardholderService {
         if(!cardholderRepository.existsById(cardholderId)) {
             throw new CardholderNotFoundException("Id", cardholderId);
         }
-        card.setCardholderId(cardholderId);
+        card.setCardholder(cardholderRepository.findById(cardholderId).get());
         cardRepository.saveAndFlush(card);
         return cardRepository.findByNumber(card.getNumber());
     }

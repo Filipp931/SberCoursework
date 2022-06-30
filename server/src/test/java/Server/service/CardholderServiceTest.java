@@ -78,7 +78,7 @@ class CardholderServiceTest {
     void getCards() throws CardholderNotFoundException {
         Cardholder c1 = new Cardholder("Ivan", "Ivanov", "Ivanovich", 89888991324L, "test@mail.ru");
         c1.setId(1L);
-        Card card = new Card(1L, LocalDate.now().toString(), LocalDate.now().toString(), 1234567890123456L);
+        Card card = new Card(c1, LocalDate.now().toString(), LocalDate.now().toString(), 1234567890123456L);
         c1.setCards(Collections.singletonList(card));
         when(cardholderRepository.existsById(1L)).thenReturn(true);
         when(cardholderRepository.getById(1L)).thenReturn(c1);
@@ -140,7 +140,9 @@ class CardholderServiceTest {
 
     @Test
     void addNewCardTest() throws CardholderNotFoundException {
-        Card card = new Card(1L, LocalDate.now().toString(), LocalDate.now().toString(), 1234567890123456L);
+        Cardholder c1 = new Cardholder("Ivan", "Ivanov", "Ivanovich", 89888991324L, "test@mail.ru");
+        c1.setId(1L);
+        Card card = new Card(c1, LocalDate.now().toString(), LocalDate.now().toString(), 1234567890123456L);
         when(cardholderRepository.existsById(1L)).thenReturn(true);
         when(cardRepository.findByNumber(card.getNumber())).thenReturn(card);
         assertEquals(cardholderService.addNewCard(1L,card), card);

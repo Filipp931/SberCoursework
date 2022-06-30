@@ -8,6 +8,9 @@ import org.hibernate.annotations.DynamicUpdate;
 
 
 import javax.persistence.*;
+import javax.validation.constraints.Future;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 import java.util.Objects;
 
 import static Server.POJO.Properties.*;
@@ -25,9 +28,6 @@ public class Card {
     @GeneratedValue(strategy =  GenerationType.IDENTITY)
     private Long id;
 
-    @Column (name = CARD_HOLDER_ID, insertable = false, updatable = false)
-    private Long cardholderId;
-
     @ManyToOne
     @JoinColumn(name = "cardholder_id")
     private Cardholder cardholder;
@@ -38,14 +38,15 @@ public class Card {
     @Column (name = Properties.CARD_EXPIRATION_DATE, nullable = false)
     private String expirationDate;
 
+    @NotNull(message = "Number cannot be empty")
     @Column (name = Properties.CARD_NUMBER, nullable = false)
     private Long number;
 
     public Card() {
 
     }
-    public Card(Long cardholderId, String issueDate, String expirationDate, Long number) {
-        this.cardholderId = cardholderId;
+    public Card(Cardholder cardholder, String issueDate, String expirationDate, Long number) {
+        this.cardholder = cardholder;
         this.issueDate = issueDate;
         this.expirationDate = expirationDate;
         this.number = number;
@@ -67,13 +68,6 @@ public class Card {
         return id;
     }
 
-    public Long getCardholderId() {
-        return cardholderId;
-    }
-
-    public void setCardholderId(Long cardholderId) {
-        this.cardholderId = cardholderId;
-    }
 
     public String getIssueDate() {
         return issueDate;
@@ -103,7 +97,7 @@ public class Card {
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("Card: {ID = ").append(id).append("; CARDHOLDER_ID = ")
-                .append(cardholderId).append("; ISSUE_DATE = ")
+                .append(cardholder.getId()).append("; ISSUE_DATE = ")
                 .append(issueDate).append("; EXPIRATION_DATE = ")
                 .append(expirationDate).append("; NUMBER = ")
                 .append(number).append( "}");
@@ -112,7 +106,7 @@ public class Card {
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, number, cardholderId);
+        return Objects.hash(id, number, cardholder.getId());
     }
 
     @Override
@@ -122,6 +116,6 @@ public class Card {
         if(this == obj)
             return true;
         Card card = (Card) obj;
-        return Objects.equals(number, card.number) && Objects.equals(cardholderId, card.cardholderId);
+        return Objects.equals(number, card.number) && Objects.equals(cardholder.getId(), card.cardholder.getId());
     }
 }

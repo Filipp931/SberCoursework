@@ -33,7 +33,7 @@ public class CardServiceImpl implements CardService {
 
     @Override
     public void addNewCard(Card card) throws CardAlreadyExistsException, CardholderNotFoundException {
-        if(!cardholderRepository.existsById(card.getCardholderId())) throw new CardholderNotFoundException("Id", card.getCardholderId());
+        if(!cardholderRepository.existsById(card.getCardholder().getId())) throw new CardholderNotFoundException("Id", card.getCardholder().getId());
         if(cardRepository.existsByNumber(card.getNumber())) throw new CardAlreadyExistsException(card);
         card.setIssueDate(LocalDate.now().toString());
         this.cardRepository.saveAndFlush(card);
@@ -45,8 +45,8 @@ public class CardServiceImpl implements CardService {
         card = new Gson().fromJson(cardJson, Card.class);
         if(cardRepository.existsByNumber(card.getNumber())){
             throw new CardAlreadyExistsException(card);}
-        if(!cardholderRepository.existsById(card.getCardholderId())) {
-            throw new CardholderNotFoundException("Id",card.getCardholderId());
+        if(!cardholderRepository.existsById(card.getCardholder().getId())) {
+            throw new CardholderNotFoundException("Id",card.getCardholder().getId());
         }
             this.cardRepository.saveAndFlush(card);
         return cardRepository.findByNumber(card.getNumber());

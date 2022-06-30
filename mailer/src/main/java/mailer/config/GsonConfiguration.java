@@ -53,7 +53,8 @@ public class GsonConfiguration {
             Card card = new Card();
             card.setIssueDate(jsonObject.get("issueDate").getAsString());
             card.setExpirationDate(jsonObject.get("expirationDate").getAsString());
-            card.setCardholderId(jsonObject.get("cardholderId").getAsLong());
+
+
             card.setNumber(jsonObject.get("number").getAsLong());
             card.setId(jsonObject.get("id").getAsLong());
             JsonElement cardholderJson = jsonObject.get("cardholder");

@@ -9,7 +9,7 @@ import org.springframework.data.repository.query.Param;
 import java.util.List;
 
 public interface CardRepository extends JpaRepository<Card, Long> {
-    @Query("SELECT c FROM Cardholder c WHERE c.id = (SELECT z.cardholderId FROM Card z WHERE z.id = :id)")
+    @Query("SELECT c FROM Cardholder c WHERE c.id = (SELECT z.cardholder FROM Card z WHERE z.id = :id)")
     Cardholder getCardHolder(@Param("id") Long id);
     Card findByNumber(Long number);
     Boolean existsByNumber(Long number);

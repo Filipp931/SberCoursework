@@ -13,6 +13,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
+import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.time.LocalDate;
@@ -40,32 +41,44 @@ class CardServiceTest {
     @Test
     void addNewCardToNotExistsCardholderTest() {
         Card card = new Card();
-        card.setCardholderId(1L);
+        Cardholder cardholderMock = Mockito.mock(Cardholder.class);
+        card.setCardholder(cardholderMock);
+        when(cardholderMock.getId()).thenReturn(1L);
         when(cardholderRepository.existsById(1L)).thenReturn(false);
         assertThrows(CardholderNotFoundException.class, () -> cardService.addNewCard(card));
     }
 
     @Test
     void addNewAlreadyExistsCardTest() {
+        Cardholder c1 = new Cardholder("Ivan", "Ivanov", "Ivanovich", 89888991324L, "test@mail.ru");
+        c1.setId(1L);
         Card card = new Card(
-                1L,
+                c1,
                 LocalDate.now().toString(),
                 LocalDate.now().toString(),
                 1234567890123456L);
-        when(cardholderRepository.existsById(card.getCardholderId())).thenReturn(true);
+        Cardholder cardholderMock = Mockito.mock(Cardholder.class);
+        when(cardholderMock.getId()).thenReturn(1L);
+        card.setCardholder(cardholderMock);
+        when(cardholderRepository.existsById(card.getCardholder().getId())).thenReturn(true);
         when(cardRepository.existsByNumber(card.getNumber())).thenReturn(true);
         assertThrows(CardAlreadyExistsException.class, () -> cardService.addNewCard(card));
     }
 
     @Test
     void testAddNewCardWithNotExistsCardholderJsonTest() {
+        Cardholder c1 = new Cardholder("Ivan", "Ivanov", "Ivanovich", 89888991324L, "test@mail.ru");
+        c1.setId(1L);
         Card card = new Card(
-                1L,
+                c1,
                 LocalDate.now().toString(),
                 LocalDate.now().toString(),
                 1234567890123456L);
+        Cardholder cardholderMock = Mockito.mock(Cardholder.class);
+        when(cardholderMock.getId()).thenReturn(1L);
+        card.setCardholder(cardholderMock);
         when(cardRepository.existsByNumber(card.getNumber())).thenReturn(false);
-        when(cardholderRepository.existsById(card.getCardholderId())).thenReturn(false);
+        when(cardholderRepository.existsById(card.getCardholder().getId())).thenReturn(false);
         Gson gson = new Gson();
         String cardJson = gson.toJson(card);
         assertThrows(CardholderNotFoundException.class, () -> cardService.addNewCard(cardJson));
@@ -73,8 +86,10 @@ class CardServiceTest {
 
     @Test
     void addNewAlreadyExistsCardJsonTest() {
+        Cardholder c1 = new Cardholder("Ivan", "Ivanov", "Ivanovich", 89888991324L, "test@mail.ru");
+        c1.setId(1L);
         Card card = new Card(
-                1L,
+                c1,
                 LocalDate.now().toString(),
                 LocalDate.now().toString(),
                 1234567890123456L);
@@ -86,13 +101,18 @@ class CardServiceTest {
 
     @Test
     void addNewCardJsonTest() throws CardholderNotFoundException, CardAlreadyExistsException {
+        Cardholder c1 = new Cardholder("Ivan", "Ivanov", "Ivanovich", 89888991324L, "test@mail.ru");
+        c1.setId(1L);
         Card card = new Card(
-                1L,
+                c1,
                 LocalDate.now().toString(),
                 LocalDate.now().toString(),
                 1234567890123456L);
+        Cardholder cardholderMock = Mockito.mock(Cardholder.class);
+        when(cardholderMock.getId()).thenReturn(1L);
+        card.setCardholder(cardholderMock);
         when(cardRepository.existsByNumber(card.getNumber())).thenReturn(false);
-        when(cardholderRepository.existsById(card.getCardholderId())).thenReturn(true);
+        when(cardholderRepository.existsById(card.getCardholder().getId())).thenReturn(true);
         when(cardRepository.findByNumber(card.getNumber())).thenReturn(card);
         Gson gson = new Gson();
         String cardJson = gson.toJson(card);
@@ -101,8 +121,10 @@ class CardServiceTest {
 
     @Test
     void getByIdTest() throws CardNotFoundException {
+        Cardholder c1 = new Cardholder("Ivan", "Ivanov", "Ivanovich", 89888991324L, "test@mail.ru");
+        c1.setId(1L);
         Card card = new Card(
-                1L,
+                c1,
                 LocalDate.now().toString(),
                 LocalDate.now().toString(),
                 1234567890123456L);
@@ -119,8 +141,10 @@ class CardServiceTest {
 
     @Test
     void getByNumberTest() throws CardNotFoundException {
+        Cardholder c1 = new Cardholder("Ivan", "Ivanov", "Ivanovich", 89888991324L, "test@mail.ru");
+        c1.setId(1L);
         Card card = new Card(
-                1L,
+                c1,
                 LocalDate.now().toString(),
                 LocalDate.now().toString(),
                 1234567890123456L);
@@ -137,13 +161,17 @@ class CardServiceTest {
 
     @Test
     void getAllTest() {
+        Cardholder c1 = new Cardholder("Ivan", "Ivanov", "Ivanovich", 89888991324L, "test@mail.ru");
+        c1.setId(1L);
+        Cardholder c2 = new Cardholder("Ivan", "Ivanov", "Ivanovich", 89888991324L, "test@mail.ru");
+        c1.setId(2L);
         Card card1 = new Card(
-                1L,
+                c1,
                 LocalDate.now().toString(),
                 LocalDate.now().toString(),
                 1234567890123456L);
         Card card2 = new Card(
-                2L,
+                c2,
                 LocalDate.now().toString(),
                 LocalDate.now().toString(),
                 1234567890123476L);
@@ -156,13 +184,17 @@ class CardServiceTest {
 
     @Test
     void getAllExpiredTest() {
+        Cardholder c1 = new Cardholder("Ivan", "Ivanov", "Ivanovich", 89888991324L, "test@mail.ru");
+        c1.setId(1L);
+        Cardholder c2 = new Cardholder("Ivan", "Ivanov", "Ivanovich", 89888991324L, "test@mail.ru");
+        c1.setId(2L);
         Card card1 = new Card(
-                1L,
+                c1,
                 LocalDate.now().toString(),
                 LocalDate.now().toString(),
                 1234567890123456L);
         Card card2 = new Card(
-                2L,
+                c2,
                 LocalDate.now().toString(),
                 LocalDate.now().toString(),
                 1234567890123476L);

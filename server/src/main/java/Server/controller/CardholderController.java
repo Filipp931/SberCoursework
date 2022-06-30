@@ -64,7 +64,7 @@ public class CardholderController {
         } catch (CardholderAlreadyExistsException e) {
             e.printStackTrace();
         }
-        return "redirect:/all";
+        return "redirect:all";
     }
     @GetMapping("/{id}/update")
     String edit(@PathVariable("id") long id, Model model)  {
