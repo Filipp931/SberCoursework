@@ -32,8 +32,9 @@ class MailerServiceTest {
     @BeforeEach
     public void init(){
         cards = new ArrayList<>();
-        Card card = new Card(1L, "2020-01-01", "2022-01-01", 1234567890123456L);
         Cardholder cardholder = new Cardholder("Ivanov", "Ivan", "Ivanovich", 89888991324L, "mail");
+        cardholder.setId(1L);
+        Card card = new Card(cardholder, "2020-01-01", "2022-01-01", 1234567890123456L);
         card.setCardholder(cardholder);
         cards.add(card);
     }

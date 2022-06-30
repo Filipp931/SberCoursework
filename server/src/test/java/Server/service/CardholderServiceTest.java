@@ -20,6 +20,7 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.when;
@@ -49,7 +50,7 @@ class CardholderServiceTest {
     void getById() throws CardholderNotFoundException {
         Cardholder c1 = new Cardholder("Ivan", "Ivanov", "Ivanovich", 89888991324L, "test@mail.ru");
         c1.setId(1L);
-        when(cardholderRepository.getById(1L)).thenReturn(c1);
+        when(cardholderRepository.findById(1L)).thenReturn(Optional.of(c1));
         when(cardholderRepository.existsById(1L)).thenReturn(true);
         assertEquals(c1, cardholderService.getById(1L));
     }
@@ -70,7 +71,7 @@ class CardholderServiceTest {
 
     @Test
     void getCardsOfNotExistsCardholder() {
-        when(cardholderRepository.existsById(1L)).thenReturn(false);
+        when(cardholderRepository.findById(1L)).thenReturn(null); //todo
         assertThrows(CardholderNotFoundException.class, () -> cardholderService.getCards(1L));
     }
 
@@ -80,8 +81,7 @@ class CardholderServiceTest {
         c1.setId(1L);
         Card card = new Card(c1, LocalDate.now().toString(), LocalDate.now().toString(), 1234567890123456L);
         c1.setCards(Collections.singletonList(card));
-        when(cardholderRepository.existsById(1L)).thenReturn(true);
-        when(cardholderRepository.getById(1L)).thenReturn(c1);
+        when(cardholderRepository.findById(1L)).thenReturn(Optional.of(c1));
         assertEquals(cardholderService.getCards(1L), c1.getCards());
     }
 
@@ -144,6 +144,7 @@ class CardholderServiceTest {
         c1.setId(1L);
         Card card = new Card(c1, LocalDate.now().toString(), LocalDate.now().toString(), 1234567890123456L);
         when(cardholderRepository.existsById(1L)).thenReturn(true);
+        when(cardholderRepository.findById(1L)).thenReturn(Optional.of(c1));
         when(cardRepository.findByNumber(card.getNumber())).thenReturn(card);
         assertEquals(cardholderService.addNewCard(1L,card), card);
     }

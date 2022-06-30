@@ -19,6 +19,7 @@
     <div style="color: red" th:if="${#fields.hasAnyErrors()}" th:errors="*{cardholder.id}"></div>
     <br>
     <span style="color: red" th:if="${message != null}" th:text="${message}"> </span>
+    <br>
     <input style='width: 250px; border-radius: 8px; background-color: #4CAF50; '
             type="submit" value="Create">
 </form>

@@ -6,23 +6,16 @@ import com.google.gson.Gson;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
-import org.mockito.ArgumentMatchers;
 import org.mockito.Mock;
-import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.web.reactive.function.client.WebClient;
 import reactor.core.publisher.Mono;
 
-import java.net.URI;
 import java.util.ArrayList;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.ArgumentMatchers.anyString;
-import static org.mockito.ArgumentMatchers.notNull;
-import static org.mockito.Matchers.any;
 import static org.mockito.Mockito.doReturn;
 import static org.mockito.Mockito.when;
 
@@ -49,14 +42,16 @@ class CardDaoTest {
         gson = new Gson();
         cardDao = new CardDao(webClientMock, gson);
         cards = new ArrayList<>();
-        Card card = new Card(1L, "2020-01-01", "2022-01-01", 1234567890123456L);
         Cardholder cardholder = new Cardholder("Ivanov", "Ivan", "Ivanovich", 89888991324L, "mail");
+        cardholder.setId(1L);
+        Card card = new Card(cardholder, "2020-01-01", "2022-01-01", 1234567890123456L);
         card.setCardholder(cardholder);
         cards.add(card);
         Gson temp = new Gson();
         cardsJson = temp.toJson(cards);
     }
 
+    @SuppressWarnings("unchecked")
     @Test
     public void getAllExpiredCardsTest(){
         when(webClientMock.get()).thenReturn(uriSpecMock);

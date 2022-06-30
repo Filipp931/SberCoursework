@@ -31,7 +31,7 @@ public class CardholderServiceImpl implements CardholderService {
     @Override
     public Cardholder getById(long cardholder_id) throws CardholderNotFoundException {
         if(!cardholderRepository.existsById(cardholder_id)) throw new CardholderNotFoundException("Id", cardholder_id);
-        return cardholderRepository.getById(cardholder_id);
+        return cardholderRepository.findById(cardholder_id).orElse(null);
     }
 
     @Override
@@ -41,8 +41,7 @@ public class CardholderServiceImpl implements CardholderService {
 
     @Override
     public List<Card> getCards(long cardholder_id) throws CardholderNotFoundException {
-        if(!cardholderRepository.existsById(cardholder_id)) throw new CardholderNotFoundException("Id", cardholder_id);
-        Cardholder cardholder = cardholderRepository.getById(cardholder_id);
+        Cardholder cardholder = cardholderRepository.findById(cardholder_id).orElseThrow(() -> new CardholderNotFoundException("Id", cardholder_id));
         return cardholder.getCards();
     }
 
