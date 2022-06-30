@@ -9,13 +9,16 @@
 <form th:method="POST" th:action="@{/card/create}" th:object="${card}">
     <label for="number">Enter card number: </label>
     <input type="number" th:field="*{number}" id="number"/>
+    <div style="color: red" th:if="${#fields.hasAnyErrors()}" th:errors="*{number}"></div>
     <br/>
     <label for="expirationDate">Expiration date: </label>
     <input type="date" th:field="*{expirationDate}" id="expirationDate"/>
     <br>
     <label for="cardholderId">Cardholder Id: </label>
-    <input type="number" th:field="*{cardholderId}" id="cardholderId"/>
+    <input type="number" th:field="*{cardholder.id}" id="cardholderId"/>
+    <div style="color: red" th:if="${#fields.hasAnyErrors()}" th:errors="*{cardholder.id}"></div>
     <br>
+    <span style="color: red" th:if="${message != null}" th:text="${message}"> </span>
     <input style='width: 250px; border-radius: 8px; background-color: #4CAF50; '
             type="submit" value="Create">
 </form>

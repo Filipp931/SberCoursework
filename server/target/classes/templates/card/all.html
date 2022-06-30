@@ -19,7 +19,7 @@
             <td><p th:text="${card.getNumber()}"></p></td>
             <td><p th:text="${card.getIssueDate()}"></p></td>
             <td><p th:text="${card.getExpirationDate()}"></p></td>
-            <td><a th:href="@{/cardholder/{id}(id=${card.getCardholderId()})}" th:text="${card.getCardholderId()}"></a></td>
+            <td><a th:href="@{/cardholder/{id}(id=${card.getCardholder().getId()})}" th:text="${card.getCardholder().getId()}"></a></td>
         </tr>
     </div>
 </table>
