@@ -11,7 +11,6 @@ import java.util.List;
 public interface CardService {
     void delete(Long id) throws CardNotFoundException;
     void addNewCard(Card card) throws CardAlreadyExistsException, CardholderNotFoundException;
-    Card addNewCard(String card) throws CardAlreadyExistsException, CardholderNotFoundException;
     Card getById(Long id) throws CardNotFoundException;
     Card getByNumber(Long number) throws CardNotFoundException;
     List<Card> getAll();

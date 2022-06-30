@@ -11,25 +11,9 @@
   <component name="ChangeListManager">
     <list default="true" id="aa02383d-1c32-45fb-b314-87073e6c7512" name="Default Changelist" comment="ok">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mailer/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mailer/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mailer/src/test/java/mailer/DAO/CardDaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/mailer/src/test/java/mailer/DAO/CardDaoTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mailer/src/test/java/mailer/service/MailerServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/mailer/src/test/java/mailer/service/MailerServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mailer/target/classes/mailer/DAO/CardDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mailer/target/classes/mailer/Mailer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mailer/target/classes/mailer/config/GsonConfiguration$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mailer/target/classes/mailer/config/GsonConfiguration$CardDeserializer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mailer/target/classes/mailer/config/GsonConfiguration.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mailer/target/classes/mailer/config/WebClientConfiguration.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mailer/target/classes/mailer/service/MailerService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Entity/Entity.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Entity/Entity.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/server/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/Server/service/impl/CardholderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/Server/service/impl/CardholderServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/test/java/Server/controller/CardControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/resources/CardControllerTest.test" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/test/java/Server/service/CardholderServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/test/java/Server/service/CardholderServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/target/classes/templates/card/addNewCard.html" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/classes/templates/card/addNewCard.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/target/maven-archiver/pom.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/target/server-0.0.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/Server/service/CardService.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/Server/service/CardService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/Server/service/impl/CardServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/Server/service/impl/CardServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/test/java/Server/service/CardServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/test/java/Server/service/CardServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,7 +98,7 @@
       <command value="mvn dependency:tree" />
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.CardholderServiceTest">
+  <component name="RunManager" selected="JUnit.CardServiceTest.getByIdTest">
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -122,6 +106,37 @@
         </value>
       </option>
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CardServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="server" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Server.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Server.service" />
+      <option name="MAIN_CLASS_NAME" value="Server.service.CardServiceTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CardServiceTest.getByIdTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="server" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Server.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Server.service" />
+      <option name="MAIN_CLASS_NAME" value="Server.service.CardServiceTest" />
+      <option name="METHOD_NAME" value="getByIdTest" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -137,38 +152,6 @@
       <option name="PACKAGE_NAME" value="Server.service" />
       <option name="MAIN_CLASS_NAME" value="Server.service.CardholderServiceTest" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CardholderServiceTest.addNewCardTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="server" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Server.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Server.service" />
-      <option name="MAIN_CLASS_NAME" value="Server.service.CardholderServiceTest" />
-      <option name="METHOD_NAME" value="addNewCardTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CardholderServiceTest.getById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="server" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Server.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Server.service" />
-      <option name="MAIN_CLASS_NAME" value="Server.service.CardholderServiceTest" />
-      <option name="METHOD_NAME" value="getById" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -226,18 +209,18 @@
       <item itemvalue="Spring Boot.Server" />
       <item itemvalue="Spring Boot.Mailer" />
       <item itemvalue="JUnit.CardholderServiceTest" />
-      <item itemvalue="JUnit.CardholderServiceTest.addNewCardTest" />
-      <item itemvalue="JUnit.CardholderServiceTest.getById" />
       <item itemvalue="JUnit.CardholderServiceTest.getCards" />
       <item itemvalue="JUnit.CardholderServiceTest.getCardsOfNotExistsCardholder" />
+      <item itemvalue="JUnit.CardServiceTest" />
+      <item itemvalue="JUnit.CardServiceTest.getByIdTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.CardServiceTest.getByIdTest" />
+        <item itemvalue="JUnit.CardServiceTest" />
         <item itemvalue="JUnit.CardholderServiceTest" />
         <item itemvalue="JUnit.CardholderServiceTest.getCardsOfNotExistsCardholder" />
         <item itemvalue="JUnit.CardholderServiceTest.getCards" />
-        <item itemvalue="JUnit.CardholderServiceTest.getById" />
-        <item itemvalue="JUnit.CardholderServiceTest.addNewCardTest" />
       </list>
     </recent_temporary>
   </component>
@@ -265,7 +248,7 @@
       <workItem from="1656565864679" duration="4051000" />
       <workItem from="1656575494789" duration="16902000" />
       <workItem from="1656593283332" duration="120000" />
-      <workItem from="1656593917144" duration="2627000" />
+      <workItem from="1656593917144" duration="2955000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1656422855772</created>
@@ -309,7 +292,21 @@
       <option name="project" value="LOCAL" />
       <updated>1656591414348</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="ok">
+      <created>1656596589740</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1656596589740</updated>
+    </task>
+    <task id="LOCAL-00008" summary="ok">
+      <created>1656596760897</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1656596760897</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -340,7 +337,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/server/src/test/java/Server/service/CardholderServiceTest.java</url>
-          <line>142</line>
+          <line>141</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>

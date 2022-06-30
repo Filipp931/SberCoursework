@@ -8,7 +8,6 @@ import Server.service.exceptions.CardAlreadyExistsException;
 import Server.service.exceptions.CardNotFoundException;
 import Server.service.exceptions.CardholderNotFoundException;
 import Server.service.impl.CardServiceImpl;
-import com.google.gson.Gson;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
@@ -19,6 +18,7 @@ import org.mockito.junit.jupiter.MockitoExtension;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.when;
@@ -65,61 +65,7 @@ class CardServiceTest {
         assertThrows(CardAlreadyExistsException.class, () -> cardService.addNewCard(card));
     }
 
-    @Test
-    void testAddNewCardWithNotExistsCardholderJsonTest() {
-        Cardholder c1 = new Cardholder("Ivan", "Ivanov", "Ivanovich", 89888991324L, "test@mail.ru");
-        c1.setId(1L);
-        Card card = new Card(
-                c1,
-                LocalDate.now().toString(),
-                LocalDate.now().toString(),
-                1234567890123456L);
-        Cardholder cardholderMock = Mockito.mock(Cardholder.class);
-        when(cardholderMock.getId()).thenReturn(1L);
-        card.setCardholder(cardholderMock);
-        when(cardRepository.existsByNumber(card.getNumber())).thenReturn(false);
-        when(cardholderRepository.existsById(card.getCardholder().getId())).thenReturn(false);
-        Gson gson = new Gson();
-        String cardJson = gson.toJson(card);
-        assertThrows(CardholderNotFoundException.class, () -> cardService.addNewCard(cardJson));
-    }
-
-    @Test
-    void addNewAlreadyExistsCardJsonTest() {
-        Cardholder c1 = new Cardholder("Ivan", "Ivanov", "Ivanovich", 89888991324L, "test@mail.ru");
-        c1.setId(1L);
-        Card card = new Card(
-                c1,
-                LocalDate.now().toString(),
-                LocalDate.now().toString(),
-                1234567890123456L);
-        when(cardRepository.existsByNumber(card.getNumber())).thenReturn(true);
-        Gson gson = new Gson();
-        String cardJson = gson.toJson(card);
-        assertThrows(CardAlreadyExistsException.class, () -> cardService.addNewCard(cardJson));
-    }
-
-    @Test
-    void addNewCardJsonTest() throws CardholderNotFoundException, CardAlreadyExistsException {
-        Cardholder c1 = new Cardholder("Ivan", "Ivanov", "Ivanovich", 89888991324L, "test@mail.ru");
-        c1.setId(1L);
-        Card card = new Card(
-                c1,
-                LocalDate.now().toString(),
-                LocalDate.now().toString(),
-                1234567890123456L);
-        Cardholder cardholderMock = Mockito.mock(Cardholder.class);
-        when(cardholderMock.getId()).thenReturn(1L);
-        card.setCardholder(cardholderMock);
-        when(cardRepository.existsByNumber(card.getNumber())).thenReturn(false);
-        when(cardholderRepository.existsById(card.getCardholder().getId())).thenReturn(true);
-        when(cardRepository.findByNumber(card.getNumber())).thenReturn(card);
-        Gson gson = new Gson();
-        String cardJson = gson.toJson(card);
-        assertEquals(cardService.addNewCard(cardJson), card);
-    }
-
-    @Test
+      @Test
     void getByIdTest() throws CardNotFoundException {
         Cardholder c1 = new Cardholder("Ivan", "Ivanov", "Ivanovich", 89888991324L, "test@mail.ru");
         c1.setId(1L);
@@ -129,13 +75,12 @@ class CardServiceTest {
                 LocalDate.now().toString(),
                 1234567890123456L);
         card.setId(1L);
-        when(cardRepository.existsById(card.getId())).thenReturn(true);
-        when(cardRepository.getById(card.getId())).thenReturn(card);
+        when(cardRepository.findById(card.getId())).thenReturn(Optional.of(card));
         assertEquals(cardService.getById(card.getId()), card);
     }
 
     @Test
-    void getByIdNotExistsTest() throws CardNotFoundException {
+    void getByIdNotExistsTest() {
         assertThrows(CardNotFoundException.class, () -> cardService.getById(1L));
     }
 
