@@ -12,47 +12,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aa02383d-1c32-45fb-b314-87073e6c7512" name="Default Changelist" comment="ok">
-      <change afterPath="$PROJECT_DIR$/MailerServer.ipr" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/server.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/POJO1.xml" beforeDir="false" />
+    <list default="true" id="aa02383d-1c32-45fb-b314-87073e6c7512" name="Default Changelist" comment="executable jars">
+      <change afterPath="$PROJECT_DIR$/server/src/main/resources/templates/credit-card-payment.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/resources/templates/people.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MailerServer.iml" beforeDir="false" afterPath="$PROJECT_DIR$/MailerServer.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mailer/mailer.iml" beforeDir="false" afterPath="$PROJECT_DIR$/mailer/mailer.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mailer/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mailer/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mailer/src/main/java/mailer/config/GsonConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/mailer/src/main/java/mailer/config/GsonConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mailer/src/test/java/mailer/DAO/CardDaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/mailer/src/test/java/mailer/DAO/CardDaoTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mailer/src/test/java/mailer/messageSender/EmailSenderServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/mailer/src/test/java/mailer/messageSender/EmailSenderServiceImplTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mailer/src/test/java/mailer/messageSender/MessageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/mailer/src/test/java/mailer/messageSender/MessageTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Entity/Entity.jar" beforeDir="false" afterPath="$PROJECT_DIR$/mailer/Entity.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/server/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/Server/POJO/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/Server/POJO/Card.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/Server/POJO/Cardholder.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/Server/POJO/Cardholder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/Server/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/Server/config/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/Server/controller/CardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/Server/controller/CardController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/Server/controller/CardholderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/Server/controller/CardholderController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/Server/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/Server/controller/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/Server/main/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/Server/main/Server.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/Server/service/CardholderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/Server/service/CardholderService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/Server/service/impl/CardServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/Server/service/impl/CardServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/Server/service/impl/CardholderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/Server/service/impl/CardholderServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/resources/log4j2.properties" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/resources/log4j2.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/resources/templates/error.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/main/resources/templates/mainView.html" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/resources/templates/mainView.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/test/java/Server/service/CardServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/test/java/Server/service/CardServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/test/java/Server/service/CardholderServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/test/java/Server/service/CardholderServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/target/classes/Server/POJO/Card.class" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/classes/Server/POJO/Card.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/target/classes/Server/POJO/Cardholder.class" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/classes/Server/POJO/Cardholder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/target/classes/Server/controller/CardController.class" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/classes/Server/controller/CardController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/target/classes/Server/controller/CardholderController.class" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/classes/Server/controller/CardholderController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/target/classes/Server/controller/MainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/classes/Server/controller/MainController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/target/classes/Server/main/Server.class" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/classes/Server/main/Server.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/target/classes/Server/service/CardService.class" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/classes/Server/service/CardService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/target/classes/Server/service/CardholderService.class" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/classes/Server/service/CardholderService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/target/classes/Server/service/impl/CardServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/classes/Server/service/impl/CardServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/target/classes/Server/service/impl/CardholderServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/classes/Server/service/impl/CardholderServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/target/classes/templates/mainView.html" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/classes/templates/mainView.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/target/test-classes/Server/service/CardServiceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/test-classes/Server/service/CardServiceTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/target/test-classes/Server/service/CardholderServiceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/test-classes/Server/service/CardholderServiceTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/resources/templates/success.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,11 +77,11 @@
       <recent name="C:\Users\admin\Desktop\Java sber\MailerServer\Server\src\main\java\ru\sber\service\exceptions" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\admin\Desktop\Java sber\MailerServer\server\src\main\resources\templates" />
       <recent name="C:\Users\admin\Desktop\Java sber\MailerServer\mailer" />
       <recent name="C:\Users\admin\Desktop\Java sber\MailerServer\server\src\main\resources" />
       <recent name="C:\Users\admin\Desktop\Java sber\MailerServer\mailer\src\main\resources" />
       <recent name="C:\Users\admin\Desktop\Java sber\MailerServer" />
-      <recent name="C:\Users\admin\Desktop\Java sber\MailerServer\server\src\main\resources\templates" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -296,7 +263,7 @@
       <workItem from="1656911994653" duration="2014000" />
       <workItem from="1656914763528" duration="3861000" />
       <workItem from="1656918691700" duration="359000" />
-      <workItem from="1656919171077" duration="10420000" />
+      <workItem from="1656919171077" duration="13232000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1656422855772</created>
@@ -361,7 +328,14 @@
       <option name="project" value="LOCAL" />
       <updated>1656597090865</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="executable jars">
+      <created>1656934179441</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1656934179441</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -385,7 +359,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init" />
     <MESSAGE value="ok" />
-    <option name="LAST_COMMIT_MESSAGE" value="ok" />
+    <MESSAGE value="executable jars" />
+    <option name="LAST_COMMIT_MESSAGE" value="executable jars" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/MailerServer$Mailer.ic" NAME="Mailer Coverage Results" MODIFIED="1656517340944" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

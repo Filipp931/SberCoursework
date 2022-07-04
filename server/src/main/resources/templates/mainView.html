@@ -3,18 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <title>Bank Server</title>
+    <style>
+        body {
+            font-size: 16pt;
+        }
+
+        h3 {
+            color: CornflowerBlue;
+        }
+
+        li {
+            color: DarkGray;
+        }
+
+        p {
+            color: OrangeRed;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
+
+<p>
+    <h3>Bank server</h3>
+<hr></hr>
 <form th:method="GET" th:action="@{cardholder/all}">
-        <input style="width: 250px; border-radius: 8px; background-color: #4CAF50; font-size: 20px;"
+    <img align="center" src="people.png" width=50 height=50>
+    <input align="center" style="width: 250px; border-radius: 8px; background-color: #4CAF50; font-size: 20px;"
            type="submit" value="All cardholders">
-</form >
+</form>
 <br>
 <form th:method="GET" th:action="@{card/all}">
-    <input style='width: 250px; border-radius: 8px; background-color: #4CAF50; font-size: 20px;'
-           type="submit" value="All cards" >
-</form >
+    <img align="center" src="credit-card-payment.png" width=50 height=50>
+    <input align="center" style='width: 250px; border-radius: 8px; background-color: #4CAF50; font-size: 20px;'
+           type="submit" value="All cards">
 
+</form>
+</p>
 
 </body>
 </html>
