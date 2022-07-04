@@ -23,9 +23,9 @@ class MessageTest {
         when(cardholder.getName()).thenReturn("Ivan");
         when(cardholder.getSurname()).thenReturn("Ivanov");
         when(cardholder.getPatronymic()).thenReturn("Ivanovich");
-        card.setCardholder(cardholder);
-        card.setNumber(1234567890123456L);
-        card.setExpirationDate("2022-01-01");
+        when(card.getCardholder()).thenReturn(cardholder);
+        when(card.getNumber()).thenReturn(1234567890123456L);
+        when(card.getExpirationDate()).thenReturn("2022-01-01");
         String result = Message.getMessage(card);
         assertTrue( result.contains(cardholder.getName()) &&
                 result.contains(cardholder.getSurname()) &&

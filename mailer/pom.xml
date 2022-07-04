@@ -22,7 +22,14 @@
                 </exclusion>
             </exclusions>
             <version>2.7.1</version>
+        </dependency>
 
+        <dependency>
+            <groupId>BankServerService</groupId>
+            <artifactId>server</artifactId>
+            <version>0.0.1</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/Entity.jar</systemPath>
         </dependency>
 
     </dependencies>
@@ -34,8 +41,8 @@
                 <version>2.7.1</version>
                 <configuration>
                     <mainClass>mailer.Mailer</mainClass>
+                    <executable>true</executable>
                 </configuration>
-
                 <executions>
                     <execution>
                         <goals>

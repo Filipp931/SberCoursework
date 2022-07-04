@@ -8,7 +8,6 @@ import Server.repository.CardholderRepository;
 import Server.service.CardholderService;
 import Server.service.exceptions.CardholderAlreadyExistsException;
 import Server.service.exceptions.CardholderNotFoundException;
-import com.google.gson.Gson;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -30,8 +29,7 @@ public class CardholderServiceImpl implements CardholderService {
 
     @Override
     public Cardholder getById(long cardholder_id) throws CardholderNotFoundException {
-        if(!cardholderRepository.existsById(cardholder_id)) throw new CardholderNotFoundException("Id", cardholder_id);
-        return cardholderRepository.findById(cardholder_id).orElse(null);
+        return cardholderRepository.findById(cardholder_id).orElseThrow(() -> new CardholderNotFoundException("Id", cardholder_id));
     }
 
     @Override
@@ -58,23 +56,11 @@ public class CardholderServiceImpl implements CardholderService {
     }
 
     @Override
-    public Cardholder addNewCardholder(String cardholderJson) throws CardholderAlreadyExistsException {
-        Cardholder cardholder;
-        cardholder = new Gson().fromJson(cardholderJson, Cardholder.class);
-        if(cardholderRepository.existsByNameAndSurnameAndPatronymicAndPhoneNumber(cardholder.getName(), cardholder.getSurname(), cardholder.getPatronymic(), cardholder.getPhoneNumber())){
-            throw new CardholderAlreadyExistsException(cardholder);
-        } else {
-            cardholderRepository.saveAndFlush(cardholder);
-        }
-        return cardholderRepository.getByName(cardholder.getName(), cardholder.getSurname(), cardholder.getPatronymic());
-    }
-
-    @Override
     public Card addNewCard(long cardholderId, Card card) throws CardholderNotFoundException{
-        if(!cardholderRepository.existsById(cardholderId)) {
-            throw new CardholderNotFoundException("Id", cardholderId);
-        }
-        card.setCardholder(cardholderRepository.findById(cardholderId).get());
+        card.setCardholder(
+                cardholderRepository.
+                        findById(cardholderId).
+                        orElseThrow(() -> new CardholderNotFoundException("Id", cardholderId)));
         cardRepository.saveAndFlush(card);
         return cardRepository.findByNumber(card.getNumber());
     }
@@ -99,10 +85,7 @@ public class CardholderServiceImpl implements CardholderService {
 
     @Override
     public void update(Cardholder newCardholder, long cardholderId) throws CardholderNotFoundException{
-        if (!cardholderRepository.existsById(cardholderId)) {
-            throw new CardholderNotFoundException("Id", cardholderId);
-        }
-        Cardholder cardholder = cardholderRepository.getById(cardholderId);
+        Cardholder cardholder = cardholderRepository.findById(cardholderId).orElseThrow(() -> new CardholderNotFoundException("Id", cardholderId));
         cardholder.setName(newCardholder.getName());
         cardholder.setSurname(newCardholder.getSurname());
         cardholder.setPatronymic(newCardholder.getPatronymic());

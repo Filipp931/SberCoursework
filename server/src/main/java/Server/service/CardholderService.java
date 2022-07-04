@@ -14,7 +14,6 @@ public interface CardholderService {
     List<Cardholder> getAll();
     List<Card> getCards(long cardholder_id) throws CardholderNotFoundException;
     void addNewCardholder(Cardholder cardholder) throws CardholderAlreadyExistsException;
-    Cardholder addNewCardholder(String cardholder) throws CardholderAlreadyExistsException;
     Card addNewCard(long cardholderId, Card card) throws CardholderNotFoundException;
     Cardholder getByName(String name, String surname, String patronymic) throws CardholderNotFoundException;
     Cardholder getByPhoneNumber(long phoneNumber) throws CardholderNotFoundException;

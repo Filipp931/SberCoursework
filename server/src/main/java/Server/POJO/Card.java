@@ -2,18 +2,14 @@ package Server.POJO;
 
 
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
-import org.hibernate.annotations.DynamicUpdate;
-
 
 import javax.persistence.*;
-import javax.validation.constraints.Future;
-import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 import java.util.Objects;
 
-import static Server.POJO.Properties.*;
+import static Server.POJO.Properties.CARD_ID;
+import static Server.POJO.Properties.CARD_ISSUE_DATE;
 
 
 @Entity

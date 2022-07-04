@@ -99,6 +99,19 @@
             <scope>provided</scope>
         </dependency>
 
+        <dependency>
+            <groupId>jakarta.xml.bind</groupId>
+            <artifactId>jakarta.xml.bind-api</artifactId>
+            <version>2.3.2</version>
+        </dependency>
+
+        <!-- Runtime, com.sun.xml.bind module -->
+        <dependency>
+            <groupId>org.glassfish.jaxb</groupId>
+            <artifactId>jaxb-runtime</artifactId>
+            <version>2.3.2</version>
+        </dependency>
+
     </dependencies>
 
     <build>
@@ -109,6 +122,7 @@
                 <version>2.7.1</version>
                 <configuration>
                     <mainClass>Server.main.Server</mainClass>
+                    <executable>true</executable>
                 </configuration>
 
                 <executions>

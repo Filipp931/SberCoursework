@@ -19,8 +19,9 @@ import javax.validation.Valid;
 @RequestMapping( "/card")
 @Controller
 public class CardController {
-    final CardService cardService;
-    CardholderService cardholderService;
+    private final CardService cardService;
+    private final CardholderService cardholderService;
+    private static final Logger logger = (Logger) LogManager.getLogger(CardController.class);
 
     @Autowired
     public CardController(CardService cardService, CardholderService cardholderService) {
@@ -43,14 +44,25 @@ public class CardController {
      * @return card
      */
     @GetMapping("/{id}")
-    String byId(@PathVariable("id") long id, Model model) throws CardNotFoundException {
-        model.addAttribute("card" ,cardService.getById(id));
+    String byId(@PathVariable("id") long id, Model model) {
+        Card card;
+        try {
+            card = cardService.getById(id);
+        } catch (CardNotFoundException e) {
+            logger.warn("Method: byId, id = " + id +" , Card not found");
+            card = new Card();
+        }
+        model.addAttribute("card" , card);
         return "card/byId";
     }
 
     @GetMapping("/{id}/delete")
-    String delete(@PathVariable("id") long id) throws CardNotFoundException {
-        cardService.delete(id);
+    String delete(@PathVariable("id") long id) {
+        try {
+            cardService.delete(id);
+        } catch (CardNotFoundException e) {
+            logger.error("Method: delete, id = " + id + " , card not found");
+        }
         return "redirect:card/all";
     }
 
@@ -60,7 +72,7 @@ public class CardController {
         try {
             card.setCardholder(cardholderService.getById(cardholderId));
         } catch (CardholderNotFoundException e) {
-            e.printStackTrace();
+            logger.error("Method: newCard, id = " + cardholderId + " , cardholder not found");
         }
         model.addAttribute("card", card);
         return "card/addNewCard";
@@ -75,9 +87,11 @@ public class CardController {
             cardService.addNewCard(card);
         } catch (CardholderNotFoundException e) {
             model.addAttribute("message", "Cardholder not found");
+            logger.error("Method: createCard, id = " + card.getCardholder().getId() + " , cardholder not found");
             return "card/addNewCard";
         } catch (CardAlreadyExistsException e) {
             model.addAttribute("message", "Card with such number already exists");
+            logger.debug("Method: createCard, card with number "+card.getNumber()+" not found");
             return "card/addNewCard";
         }
         return "redirect:all";

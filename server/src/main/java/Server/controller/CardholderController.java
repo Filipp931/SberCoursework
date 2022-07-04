@@ -2,24 +2,26 @@ package Server.controller;
 
 
 import Server.POJO.Card;
-import Server.service.CardholderService;
 import Server.POJO.Cardholder;
+import Server.service.CardholderService;
 import Server.service.exceptions.CardholderAlreadyExistsException;
 import Server.service.exceptions.CardholderNotFoundException;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.core.Logger;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
+import java.util.ArrayList;
 import java.util.List;
 
 @RequestMapping( "/cardholder")
 @Controller
 public class CardholderController {
-    final
-    CardholderService cardholderService;
+    final CardholderService cardholderService;
+    private static final Logger logger = (Logger) LogManager.getLogger(CardholderController.class);
 
     public CardholderController(CardholderService cardholderService) {
         this.cardholderService = cardholderService;
@@ -32,19 +34,39 @@ public class CardholderController {
     }
 
     @GetMapping("/{id}")
-    String byId(@PathVariable("id") long id, Model model) throws CardholderNotFoundException {
-        model.addAttribute("cardholder" ,cardholderService.getById(id));
+    String byId(@PathVariable("id") long id, Model model) {
+        Cardholder cardholder;
+        try {
+            cardholder = cardholderService.getById(id);
+        } catch (CardholderNotFoundException e) {
+            logger.warn("Method: byId, id = " + id +" , Card not found");
+            cardholder = new Cardholder();
+        }
+        model.addAttribute("cardholder" ,cardholder);
         return "cardholder/byId";
     }
 
     @GetMapping("/{id}/cards")
-    String getCards(@PathVariable("id") long id, Model model) throws CardholderNotFoundException {
-        model.addAttribute("cards", cardholderService.getCards(id));
+    String getCards(@PathVariable("id") long id, Model model) {
+        List<Card> cards;
+        try {
+            Cardholder cardholder = cardholderService.getById(id);
+            cards = cardholder.getCards();
+        } catch (CardholderNotFoundException e) {
+            logger.error("Method: getCards, id = " + id +" , Cardholder not found");
+            cards = new ArrayList<>();
+        }
+        model.addAttribute("cards", cards);
         return "card/all";
     }
+
     @GetMapping( "/delete")
-    void delete(@RequestParam long id) throws CardholderNotFoundException {
-        cardholderService.delete(id);
+    void delete(@RequestParam long id)  {
+        try {
+            cardholderService.delete(id);
+        } catch (CardholderNotFoundException e) {
+            logger.error("Method: delete, id = " + id +" , Cardholder not found");
+        }
     }
 
     @GetMapping("/addNewCardholder")
@@ -62,7 +84,7 @@ public class CardholderController {
         try {
             cardholderService.addNewCardholder(cardholder);
         } catch (CardholderAlreadyExistsException e) {
-            e.printStackTrace();
+            logger.error("Method: createCardholder, Cardholder "+cardholder.toString()+" already exists");
         }
         return "redirect:all";
     }
@@ -71,7 +93,7 @@ public class CardholderController {
         try {
             model.addAttribute("cardholder", cardholderService.getById(id));
         } catch (CardholderNotFoundException e) {
-            e.printStackTrace();
+            logger.error("Method: edit, id = " + id +" , Cardholder not found");
         }
         return "cardholder/edit";
     }
@@ -86,7 +108,7 @@ public class CardholderController {
         try {
             cardholderService.update(cardholder, id);
         } catch (CardholderNotFoundException e) {
-            e.printStackTrace();
+            logger.error("Method: update, id = " + id +" , Cardholder not found");
         }
         return "redirect:all";
     }

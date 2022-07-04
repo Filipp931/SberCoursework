@@ -8,11 +8,11 @@ import Server.service.exceptions.CardAlreadyExistsException;
 import Server.service.exceptions.CardNotFoundException;
 import Server.service.exceptions.CardholderNotFoundException;
 import Server.service.impl.CardServiceImpl;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
-import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.time.LocalDate;
@@ -20,7 +20,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.mockito.Mockito.when;
 
 @ExtendWith(MockitoExtension.class)
@@ -32,51 +33,40 @@ class CardServiceTest {
     @InjectMocks
     private CardServiceImpl cardService;
 
+    private Cardholder cardholder1;
+    private Card card1;
+    private Card card2;
+
+    @BeforeEach
+    public void init(){
+        cardholder1 = new Cardholder("Ivan", "Ivanov", "Ivanovich", 89888991324L, "test@mail.ru");
+        cardholder1.setId(1L);
+        card1 = new Card(cardholder1, LocalDate.now().toString(), LocalDate.now().toString(), 1234567890123456L);
+        card2 = new Card(cardholder1, LocalDate.now().toString(), LocalDate.now().toString(), 1234567890123458L);
+        card1.setCardholder(cardholder1);
+    }
+
     @Test
     void deleteNotExistsCardTest() {
-        when(cardRepository.existsById(1L)).thenReturn(false);
-        assertThrows(CardNotFoundException.class, () -> cardService.delete(1L));
+        assertThrows(CardNotFoundException.class, () -> cardService.delete(cardholder1.getId()));
     }
 
     @Test
     void addNewCardToNotExistsCardholderTest() {
-        Card card = new Card();
-        Cardholder cardholderMock = Mockito.mock(Cardholder.class);
-        card.setCardholder(cardholderMock);
-        when(cardholderMock.getId()).thenReturn(1L);
-        when(cardholderRepository.existsById(1L)).thenReturn(false);
-        assertThrows(CardholderNotFoundException.class, () -> cardService.addNewCard(card));
+        assertThrows(CardholderNotFoundException.class, () -> cardService.addNewCard(card1));
     }
 
     @Test
     void addNewAlreadyExistsCardTest() {
-        Cardholder c1 = new Cardholder("Ivan", "Ivanov", "Ivanovich", 89888991324L, "test@mail.ru");
-        c1.setId(1L);
-        Card card = new Card(
-                c1,
-                LocalDate.now().toString(),
-                LocalDate.now().toString(),
-                1234567890123456L);
-        Cardholder cardholderMock = Mockito.mock(Cardholder.class);
-        when(cardholderMock.getId()).thenReturn(1L);
-        card.setCardholder(cardholderMock);
-        when(cardholderRepository.existsById(card.getCardholder().getId())).thenReturn(true);
-        when(cardRepository.existsByNumber(card.getNumber())).thenReturn(true);
-        assertThrows(CardAlreadyExistsException.class, () -> cardService.addNewCard(card));
+        when(cardholderRepository.existsById(card1.getCardholder().getId())).thenReturn(true);
+        when(cardRepository.existsByNumber(card1.getNumber())).thenReturn(true);
+        assertThrows(CardAlreadyExistsException.class, () -> cardService.addNewCard(card1));
     }
 
       @Test
     void getByIdTest() throws CardNotFoundException {
-        Cardholder c1 = new Cardholder("Ivan", "Ivanov", "Ivanovich", 89888991324L, "test@mail.ru");
-        c1.setId(1L);
-        Card card = new Card(
-                c1,
-                LocalDate.now().toString(),
-                LocalDate.now().toString(),
-                1234567890123456L);
-        card.setId(1L);
-        when(cardRepository.findById(card.getId())).thenReturn(Optional.of(card));
-        assertEquals(cardService.getById(card.getId()), card);
+        when(cardRepository.findById(card1.getId())).thenReturn(Optional.of(card1));
+        assertEquals(cardService.getById(card1.getId()), card1);
     }
 
     @Test
@@ -86,17 +76,9 @@ class CardServiceTest {
 
     @Test
     void getByNumberTest() throws CardNotFoundException {
-        Cardholder c1 = new Cardholder("Ivan", "Ivanov", "Ivanovich", 89888991324L, "test@mail.ru");
-        c1.setId(1L);
-        Card card = new Card(
-                c1,
-                LocalDate.now().toString(),
-                LocalDate.now().toString(),
-                1234567890123456L);
-        card.setId(1L);
-        when(cardRepository.existsByNumber(card.getNumber())).thenReturn(true);
-        when(cardRepository.findByNumber(card.getNumber())).thenReturn(card);
-        assertEquals(cardService.getByNumber(card.getNumber()), card);
+        when(cardRepository.existsByNumber(card1.getNumber())).thenReturn(true);
+        when(cardRepository.findByNumber(card1.getNumber())).thenReturn(card1);
+        assertEquals(cardService.getByNumber(card1.getNumber()), card1);
     }
 
     @Test
@@ -106,20 +88,6 @@ class CardServiceTest {
 
     @Test
     void getAllTest() {
-        Cardholder c1 = new Cardholder("Ivan", "Ivanov", "Ivanovich", 89888991324L, "test@mail.ru");
-        c1.setId(1L);
-        Cardholder c2 = new Cardholder("Ivan", "Ivanov", "Ivanovich", 89888991324L, "test@mail.ru");
-        c1.setId(2L);
-        Card card1 = new Card(
-                c1,
-                LocalDate.now().toString(),
-                LocalDate.now().toString(),
-                1234567890123456L);
-        Card card2 = new Card(
-                c2,
-                LocalDate.now().toString(),
-                LocalDate.now().toString(),
-                1234567890123476L);
         List<Card> cards = new ArrayList<>();
         cards.add(card1);
         cards.add(card2);
@@ -129,20 +97,6 @@ class CardServiceTest {
 
     @Test
     void getAllExpiredTest() {
-        Cardholder c1 = new Cardholder("Ivan", "Ivanov", "Ivanovich", 89888991324L, "test@mail.ru");
-        c1.setId(1L);
-        Cardholder c2 = new Cardholder("Ivan", "Ivanov", "Ivanovich", 89888991324L, "test@mail.ru");
-        c1.setId(2L);
-        Card card1 = new Card(
-                c1,
-                LocalDate.now().toString(),
-                LocalDate.now().toString(),
-                1234567890123456L);
-        Card card2 = new Card(
-                c2,
-                LocalDate.now().toString(),
-                LocalDate.now().toString(),
-                1234567890123476L);
         List<Card> cards = new ArrayList<>();
         cards.add(card1);
         cards.add(card2);
@@ -152,10 +106,9 @@ class CardServiceTest {
 
     @Test
     void getCardholderTest() throws CardNotFoundException {
-        Cardholder c1 = new Cardholder("Ivan", "Ivanov", "Ivanovich", 89888991324L, "test@mail.ru");
         when(cardRepository.existsById(1L)).thenReturn(true);
-        when(cardRepository.getCardHolder(1L)).thenReturn(c1);
-        assertEquals(cardService.getCardholder(1L), c1);
+        when(cardRepository.getCardHolder(1L)).thenReturn(cardholder1);
+        assertEquals(cardService.getCardholder(1L), cardholder1);
     }
 
     @Test

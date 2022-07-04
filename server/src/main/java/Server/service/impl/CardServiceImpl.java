@@ -7,9 +7,7 @@ import Server.repository.CardholderRepository;
 import Server.service.exceptions.CardAlreadyExistsException;
 import Server.service.exceptions.CardNotFoundException;
 import Server.service.exceptions.CardholderNotFoundException;
-import com.google.gson.Gson;
 import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Service;
 import Server.service.CardService;
 
 import java.time.LocalDate;

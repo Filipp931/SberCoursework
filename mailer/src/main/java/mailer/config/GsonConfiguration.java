@@ -16,7 +16,7 @@ import java.lang.reflect.Type;
  */
 @Configuration
 public class GsonConfiguration {
-    GsonBuilder gsonBuilder;
+    private final GsonBuilder gsonBuilder;
 
     @SuppressWarnings("SpringJavaInjectionPointsAutowiringInspection")
     public GsonConfiguration(GsonBuilder gsonBuilder) {
