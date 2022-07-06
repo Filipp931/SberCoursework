@@ -12,23 +12,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aa02383d-1c32-45fb-b314-87073e6c7512" name="Default Changelist" comment="images html">
-      <change afterPath="$PROJECT_DIR$/mailer/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/docker-compose.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/test/java/Server/POJO/CardTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/test/java/Server/POJO/CardholderTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/Server/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/Server/config/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/resources/templates/mainView.html" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/resources/templates/mainView.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/target/classes/Server/config/SecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/classes/Server/config/SecurityConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/target/classes/templates/error.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/target/classes/templates/mainView.html" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/classes/templates/mainView.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/target/classes/templates/success.html" beforeDir="false" />
-    </list>
+    <list default="true" id="aa02383d-1c32-45fb-b314-87073e6c7512" name="Default Changelist" comment="controller test" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -278,7 +262,7 @@
       <workItem from="1656919171077" duration="15901000" />
       <workItem from="1657006746237" duration="18392000" />
       <workItem from="1657084483958" duration="44000" />
-      <workItem from="1657084549941" duration="9188000" />
+      <workItem from="1657084549941" duration="9720000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1656422855772</created>
@@ -357,7 +341,14 @@
       <option name="project" value="LOCAL" />
       <updated>1656937457539</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="controller test">
+      <created>1657094646054</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1657094646054</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -383,15 +374,16 @@
     <MESSAGE value="ok" />
     <MESSAGE value="executable jars" />
     <MESSAGE value="images html" />
-    <option name="LAST_COMMIT_MESSAGE" value="images html" />
+    <MESSAGE value="controller test" />
+    <option name="LAST_COMMIT_MESSAGE" value="controller test" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-field">
           <url>file://$PROJECT_DIR$/server/src/test/java/Server/controller/CardControllerTest.java</url>
-          <line>14</line>
-          <properties field="mockMvc" class="Server.controller.CardControllerTest" />
+          <line>17</line>
+          <properties field="template" class="Server.controller.CardControllerTest" />
           <option name="timeStamp" value="10" />
         </line-breakpoint>
       </breakpoints>
