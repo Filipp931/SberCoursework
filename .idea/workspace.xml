@@ -12,14 +12,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aa02383d-1c32-45fb-b314-87073e6c7512" name="Default Changelist" comment="executable jars">
-      <change afterPath="$PROJECT_DIR$/server/src/main/resources/templates/credit-card-payment.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/resources/templates/people.png" afterDir="false" />
+    <list default="true" id="aa02383d-1c32-45fb-b314-87073e6c7512" name="Default Changelist" comment="images html">
+      <change afterPath="$PROJECT_DIR$/mailer/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/docker-compose.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/test/java/Server/POJO/CardTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/test/java/Server/POJO/CardholderTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/server/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/resources/templates/error.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/Server/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/Server/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/main/resources/templates/mainView.html" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/resources/templates/mainView.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/resources/templates/success.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/target/classes/Server/config/SecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/classes/Server/config/SecurityConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/target/classes/templates/error.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/target/classes/templates/mainView.html" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/classes/templates/mainView.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/target/classes/templates/success.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,11 +85,11 @@
       <recent name="C:\Users\admin\Desktop\Java sber\MailerServer\Server\src\main\java\ru\sber\service\exceptions" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\admin\Desktop\Java sber\MailerServer\server" />
+      <recent name="C:\Users\admin\Desktop\Java sber\MailerServer\server\docker" />
       <recent name="C:\Users\admin\Desktop\Java sber\MailerServer\server\src\main\resources\templates" />
       <recent name="C:\Users\admin\Desktop\Java sber\MailerServer\mailer" />
       <recent name="C:\Users\admin\Desktop\Java sber\MailerServer\server\src\main\resources" />
-      <recent name="C:\Users\admin\Desktop\Java sber\MailerServer\mailer\src\main\resources" />
-      <recent name="C:\Users\admin\Desktop\Java sber\MailerServer" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -90,6 +98,7 @@
       <recent name="Server" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="Server.controller" />
       <recent name="Server.POJO" />
       <recent name="mailer.service" />
       <recent name="mailer.sender" />
@@ -109,7 +118,7 @@
       <command value="mvn install:install-file -Dfile=out\artifacts\Entity\Entity.jar" />
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.Mailer">
+  <component name="RunManager" selected="JUnit.CardControllerTest">
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -121,77 +130,80 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CardDaoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="mailer" />
+    <configuration name="CardControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="server" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="mailer.DAO.*" />
+          <option name="PATTERN" value="Server.controller.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="mailer.DAO" />
-      <option name="MAIN_CLASS_NAME" value="mailer.DAO.CardDaoTest" />
+      <option name="PACKAGE_NAME" value="Server.controller" />
+      <option name="MAIN_CLASS_NAME" value="Server.controller.CardControllerTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="EmailSenderServiceImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="mailer" />
+    <configuration name="CardholderTest.getAndSetName" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="server" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="mailer.messageSender.*" />
+          <option name="PATTERN" value="Server.POJO.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="mailer.messageSender" />
-      <option name="MAIN_CLASS_NAME" value="mailer.messageSender.EmailSenderServiceImplTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="PACKAGE_NAME" value="Server.POJO" />
+      <option name="MAIN_CLASS_NAME" value="Server.POJO.CardholderTest" />
+      <option name="METHOD_NAME" value="getAndSetName" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MailerServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="mailer" />
+    <configuration name="CardholderTest.getCards" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="server" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="mailer.service.*" />
+          <option name="PATTERN" value="Server.POJO.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="mailer.service" />
-      <option name="MAIN_CLASS_NAME" value="mailer.service.MailerServiceTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="PACKAGE_NAME" value="Server.POJO" />
+      <option name="MAIN_CLASS_NAME" value="Server.POJO.CardholderTest" />
+      <option name="METHOD_NAME" value="getCards" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MessageTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="mailer" />
+    <configuration name="CardholderTest.testEquals" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="server" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="mailer.messageSender.*" />
+          <option name="PATTERN" value="Server.POJO.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="mailer.messageSender" />
-      <option name="MAIN_CLASS_NAME" value="mailer.messageSender.MessageTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="PACKAGE_NAME" value="Server.POJO" />
+      <option name="MAIN_CLASS_NAME" value="Server.POJO.CardholderTest" />
+      <option name="METHOD_NAME" value="testEquals" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MessageTest.messageTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="mailer" />
+    <configuration name="CardholderTest.testToString" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="server" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="mailer.messageSender.*" />
+          <option name="PATTERN" value="Server.POJO.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="mailer.messageSender" />
-      <option name="MAIN_CLASS_NAME" value="mailer.messageSender.MessageTest" />
-      <option name="METHOD_NAME" value="messageTest" />
+      <option name="PACKAGE_NAME" value="Server.POJO" />
+      <option name="MAIN_CLASS_NAME" value="Server.POJO.CardholderTest" />
+      <option name="METHOD_NAME" value="testToString" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -215,21 +227,21 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.MessageTest.messageTest" />
-      <item itemvalue="JUnit.MailerServiceTest" />
-      <item itemvalue="JUnit.CardDaoTest" />
-      <item itemvalue="JUnit.EmailSenderServiceImplTest" />
       <item itemvalue="Spring Boot.Server" />
       <item itemvalue="Spring Boot.Mailer" />
-      <item itemvalue="JUnit.MessageTest" />
+      <item itemvalue="JUnit.CardholderTest.getCards" />
+      <item itemvalue="JUnit.CardholderTest.getAndSetName" />
+      <item itemvalue="JUnit.CardholderTest.testToString" />
+      <item itemvalue="JUnit.CardholderTest.testEquals" />
+      <item itemvalue="JUnit.CardControllerTest" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.MailerServiceTest" />
-        <item itemvalue="JUnit.MessageTest" />
-        <item itemvalue="JUnit.EmailSenderServiceImplTest" />
-        <item itemvalue="JUnit.CardDaoTest" />
-        <item itemvalue="JUnit.MessageTest.messageTest" />
+        <item itemvalue="JUnit.CardControllerTest" />
+        <item itemvalue="JUnit.CardholderTest.testEquals" />
+        <item itemvalue="JUnit.CardholderTest.testToString" />
+        <item itemvalue="JUnit.CardholderTest.getAndSetName" />
+        <item itemvalue="JUnit.CardholderTest.getCards" />
       </list>
     </recent_temporary>
   </component>
@@ -263,7 +275,10 @@
       <workItem from="1656911994653" duration="2014000" />
       <workItem from="1656914763528" duration="3861000" />
       <workItem from="1656918691700" duration="359000" />
-      <workItem from="1656919171077" duration="13232000" />
+      <workItem from="1656919171077" duration="15901000" />
+      <workItem from="1657006746237" duration="18392000" />
+      <workItem from="1657084483958" duration="44000" />
+      <workItem from="1657084549941" duration="9188000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1656422855772</created>
@@ -335,7 +350,14 @@
       <option name="project" value="LOCAL" />
       <updated>1656934179441</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="images html">
+      <created>1656937457539</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1656937457539</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -360,9 +382,23 @@
     <MESSAGE value="init" />
     <MESSAGE value="ok" />
     <MESSAGE value="executable jars" />
-    <option name="LAST_COMMIT_MESSAGE" value="executable jars" />
+    <MESSAGE value="images html" />
+    <option name="LAST_COMMIT_MESSAGE" value="images html" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-field">
+          <url>file://$PROJECT_DIR$/server/src/test/java/Server/controller/CardControllerTest.java</url>
+          <line>14</line>
+          <properties field="mockMvc" class="Server.controller.CardControllerTest" />
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/MailerServer$Mailer.ic" NAME="Mailer Coverage Results" MODIFIED="1656517340944" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/MailerServer$Server.ic" NAME="Server Coverage Results" MODIFIED="1657090204899" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/MailerServer$Mailer.ic" NAME="Mailer Coverage Results" MODIFIED="1656937822813" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
