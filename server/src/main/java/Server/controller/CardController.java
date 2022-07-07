@@ -13,6 +13,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.context.request.WebRequest;
 
 import javax.validation.Valid;
 
@@ -44,57 +45,39 @@ public class CardController {
      * @return card
      */
     @GetMapping("/{id}")
-    String byId(@PathVariable("id") long id, Model model) {
-        Card card;
-        try {
-            card = cardService.getById(id);
-        } catch (CardNotFoundException e) {
-            logger.warn("Method: byId, id = " + id +" , Card not found");
-            card = new Card();
-        }
-        model.addAttribute("card" , card);
+    String byId(@PathVariable("id") long id, Model model) throws CardNotFoundException {
+        model.addAttribute("card" , cardService.getById(id));
         return "card/byId";
     }
 
     @GetMapping("/{id}/delete")
-    String delete(@PathVariable("id") long id) {
-        try {
-            cardService.delete(id);
-        } catch (CardNotFoundException e) {
-            logger.error("Method: delete, id = " + id + " , card not found");
-        }
+    String delete(@PathVariable("id") long id) throws CardNotFoundException {
+        cardService.delete(id);
         return "redirect:card/all";
     }
 
     @GetMapping("/addNewCard{id}")
-    String newCard(@PathVariable("id") long cardholderId, Model model){
+    String newCard(@PathVariable("id") long cardholderId, Model model) throws CardholderNotFoundException {
         Card card = new Card();
-        try {
-            card.setCardholder(cardholderService.getById(cardholderId));
-        } catch (CardholderNotFoundException e) {
-            logger.error("Method: newCard, id = " + cardholderId + " , cardholder not found");
-        }
+        card.setCardholder(cardholderService.getById(cardholderId));
         model.addAttribute("card", card);
         return "card/addNewCard";
     }
 
     @PostMapping("/create")
-    String createCard(@ModelAttribute("card") @Valid Card card, BindingResult bindingResult, Model model) {
+    String createCard(@ModelAttribute("card") @Valid Card card, BindingResult bindingResult) throws CardholderNotFoundException, CardAlreadyExistsException {
         if(bindingResult.hasErrors()) {
             return "card/create";
         }
-        try {
-            cardService.addNewCard(card);
-        } catch (CardholderNotFoundException e) {
-            model.addAttribute("message", "Cardholder not found");
-            logger.error("Method: createCard, id = " + card.getCardholder().getId() + " , cardholder not found");
-            return "card/addNewCard";
-        } catch (CardAlreadyExistsException e) {
-            model.addAttribute("message", "Card with such number already exists");
-            logger.debug("Method: createCard, card with number "+card.getNumber()+" not found");
-            return "card/addNewCard";
-        }
+        cardService.addNewCard(card);
         return "redirect:all";
+    }
+
+    @ExceptionHandler
+    public String error(WebRequest webRequest, Exception e, Model model){
+        logger.error(webRequest.toString(), e);
+        model.addAttribute("message", e.getMessage());
+        return "exception";
     }
 
 }

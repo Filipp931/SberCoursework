@@ -13,8 +13,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aa02383d-1c32-45fb-b314-87073e6c7512" name="Default Changelist" comment="cardholderController Test and exceptionHandler">
+      <change afterPath="$PROJECT_DIR$/server/src/test/java/Server/controller/CardControllerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/Server/controller/CardholderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/Server/controller/CardholderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/Server/controller/CardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/Server/controller/CardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/target/classes/Server/controller/CardController.class" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/classes/Server/controller/CardController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/target/classes/Server/controller/CardholderController.class" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/classes/Server/controller/CardholderController.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -26,8 +28,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
-        <option value="JUnit5 Test Class" />
         <option value="HTML File" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -108,7 +110,7 @@
       <command value="mvn install:install-file -Dfile=out\artifacts\Entity\Entity.jar" />
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.CardholderControllerTest">
+  <component name="RunManager" selected="JUnit.CardControllerTest.all">
     <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -122,7 +124,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CardholderControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CardControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="server" />
       <extension name="coverage">
         <pattern>
@@ -131,13 +133,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="Server.controller" />
-      <option name="MAIN_CLASS_NAME" value="Server.controller.CardholderControllerTest" />
+      <option name="MAIN_CLASS_NAME" value="Server.controller.CardControllerTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CardholderControllerTest.edit" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CardControllerTest.all" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="server" />
       <extension name="coverage">
         <pattern>
@@ -146,14 +148,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="Server.controller" />
-      <option name="MAIN_CLASS_NAME" value="Server.controller.CardholderControllerTest" />
-      <option name="METHOD_NAME" value="edit" />
+      <option name="MAIN_CLASS_NAME" value="Server.controller.CardControllerTest" />
+      <option name="METHOD_NAME" value="all" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CardholderControllerTest.editNotExistsCardholder" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CardControllerTest.createCard" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="server" />
       <extension name="coverage">
         <pattern>
@@ -162,14 +164,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="Server.controller" />
-      <option name="MAIN_CLASS_NAME" value="Server.controller.CardholderControllerTest" />
-      <option name="METHOD_NAME" value="editNotExistsCardholder" />
+      <option name="MAIN_CLASS_NAME" value="Server.controller.CardControllerTest" />
+      <option name="METHOD_NAME" value="createCard" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CardholderControllerTest.update" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CardControllerTest.createCardAlreadyExists" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="server" />
       <extension name="coverage">
         <pattern>
@@ -178,14 +180,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="Server.controller" />
-      <option name="MAIN_CLASS_NAME" value="Server.controller.CardholderControllerTest" />
-      <option name="METHOD_NAME" value="update" />
+      <option name="MAIN_CLASS_NAME" value="Server.controller.CardControllerTest" />
+      <option name="METHOD_NAME" value="createCardAlreadyExists" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CardholderControllerTest.updateNotExists" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CardControllerTest.newCardCardholderNotFound" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="server" />
       <extension name="coverage">
         <pattern>
@@ -194,8 +196,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="Server.controller" />
-      <option name="MAIN_CLASS_NAME" value="Server.controller.CardholderControllerTest" />
-      <option name="METHOD_NAME" value="updateNotExists" />
+      <option name="MAIN_CLASS_NAME" value="Server.controller.CardControllerTest" />
+      <option name="METHOD_NAME" value="newCardCardholderNotFound" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -221,19 +223,19 @@
     <list>
       <item itemvalue="Spring Boot.Server" />
       <item itemvalue="Spring Boot.Mailer" />
-      <item itemvalue="JUnit.CardholderControllerTest.edit" />
-      <item itemvalue="JUnit.CardholderControllerTest.editNotExistsCardholder" />
-      <item itemvalue="JUnit.CardholderControllerTest.updateNotExists" />
-      <item itemvalue="JUnit.CardholderControllerTest.update" />
-      <item itemvalue="JUnit.CardholderControllerTest" />
+      <item itemvalue="JUnit.CardControllerTest.newCardCardholderNotFound" />
+      <item itemvalue="JUnit.CardControllerTest.createCardAlreadyExists" />
+      <item itemvalue="JUnit.CardControllerTest.createCard" />
+      <item itemvalue="JUnit.CardControllerTest" />
+      <item itemvalue="JUnit.CardControllerTest.all" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.CardholderControllerTest" />
-        <item itemvalue="JUnit.CardholderControllerTest.editNotExistsCardholder" />
-        <item itemvalue="JUnit.CardholderControllerTest.updateNotExists" />
-        <item itemvalue="JUnit.CardholderControllerTest.update" />
-        <item itemvalue="JUnit.CardholderControllerTest.edit" />
+        <item itemvalue="JUnit.CardControllerTest.all" />
+        <item itemvalue="JUnit.CardControllerTest" />
+        <item itemvalue="JUnit.CardControllerTest.createCard" />
+        <item itemvalue="JUnit.CardControllerTest.createCardAlreadyExists" />
+        <item itemvalue="JUnit.CardControllerTest.newCardCardholderNotFound" />
       </list>
     </recent_temporary>
   </component>
@@ -271,7 +273,7 @@
       <workItem from="1657006746237" duration="18392000" />
       <workItem from="1657084483958" duration="44000" />
       <workItem from="1657084549941" duration="25621000" />
-      <workItem from="1657170535819" duration="17653000" />
+      <workItem from="1657170535819" duration="22648000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1656422855772</created>
@@ -399,7 +401,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657193852772</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="cardholderController Test and exceptionHandler">
+      <created>1657194884975</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1657194884975</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
