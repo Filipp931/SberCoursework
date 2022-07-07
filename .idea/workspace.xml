@@ -12,16 +12,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aa02383d-1c32-45fb-b314-87073e6c7512" name="Default Changelist" comment="testing with full spring context">
-      <change afterPath="$PROJECT_DIR$/server/src/main/resources/templates/Exception.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/test/java/Server/controller/CardholderControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="aa02383d-1c32-45fb-b314-87073e6c7512" name="Default Changelist" comment="cardholderController Test and exceptionHandler">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/main/java/Server/controller/CardholderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/Server/controller/CardholderController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/resources/templates/cardholder/byId.html" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/resources/templates/cardholder/byId.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/test/java/Server/controller/CardControllerTest.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/server/target/classes/Server/controller/CardholderController.class" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/classes/Server/controller/CardholderController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/target/classes/templates/cardholder/byId.html" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/classes/templates/cardholder/byId.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,7 +108,7 @@
       <command value="mvn install:install-file -Dfile=out\artifacts\Entity\Entity.jar" />
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.Server">
+  <component name="RunManager" selected="JUnit.CardholderControllerTest">
     <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -236,9 +230,9 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.CardholderControllerTest" />
+        <item itemvalue="JUnit.CardholderControllerTest.editNotExistsCardholder" />
         <item itemvalue="JUnit.CardholderControllerTest.updateNotExists" />
         <item itemvalue="JUnit.CardholderControllerTest.update" />
-        <item itemvalue="JUnit.CardholderControllerTest.editNotExistsCardholder" />
         <item itemvalue="JUnit.CardholderControllerTest.edit" />
       </list>
     </recent_temporary>
@@ -277,7 +271,7 @@
       <workItem from="1657006746237" duration="18392000" />
       <workItem from="1657084483958" duration="44000" />
       <workItem from="1657084549941" duration="25621000" />
-      <workItem from="1657170535819" duration="16451000" />
+      <workItem from="1657170535819" duration="17653000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1656422855772</created>
@@ -398,7 +392,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657177652131</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="cardholderController Test and exceptionHandler">
+      <created>1657193852772</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1657193852772</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -427,7 +428,8 @@
     <MESSAGE value="controller test" />
     <MESSAGE value="docker working!!!!" />
     <MESSAGE value="testing with full spring context" />
-    <option name="LAST_COMMIT_MESSAGE" value="testing with full spring context" />
+    <MESSAGE value="cardholderController Test and exceptionHandler" />
+    <option name="LAST_COMMIT_MESSAGE" value="cardholderController Test and exceptionHandler" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>

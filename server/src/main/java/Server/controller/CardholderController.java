@@ -12,9 +12,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.context.request.WebRequest;
 
 import javax.validation.Valid;
-import java.util.ArrayList;
 import java.util.List;
 
 @RequestMapping( "/cardholder")
@@ -36,12 +36,7 @@ public class CardholderController {
     @GetMapping("/{id}")
     String byId(@PathVariable("id") long id, Model model) throws CardholderNotFoundException {
         Cardholder cardholder;
-        try {
-            cardholder = cardholderService.getById(id);
-        } catch (CardholderNotFoundException e) {
-            logger.warn("Method: byId, id = " + id +" , Card not found");
-            throw e;
-        }
+        cardholder = cardholderService.getById(id);
         model.addAttribute("cardholder" ,cardholder);
         return "cardholder/byId";
     }
@@ -49,26 +44,16 @@ public class CardholderController {
     @GetMapping("/{id}/cards")
     String getCards(@PathVariable("id") long id, Model model) throws CardholderNotFoundException {
         List<Card> cards;
-        try {
-            Cardholder cardholder = cardholderService.getById(id);
-            cards = cardholder.getCards();
-        } catch (CardholderNotFoundException e) {
-            logger.error("Method: getCards, id = " + id +" , Cardholder not found");
-            throw e;
-        }
+        Cardholder cardholder = cardholderService.getById(id);
+        cards = cardholder.getCards();
         model.addAttribute("cards", cards);
         return "card/all";
     }
 
     @GetMapping( "/delete")
     String delete(@RequestParam long id) throws CardholderNotFoundException {
-        try {
-            cardholderService.delete(id);
-            return "redirect:all";
-        } catch (CardholderNotFoundException e) {
-            logger.error("Method: delete, id = " + id +" , Cardholder not found");
-            throw e;
-        }
+        cardholderService.delete(id);
+        return "redirect:all";
     }
 
     @GetMapping("/addNewCardholder")
@@ -83,22 +68,12 @@ public class CardholderController {
         if(bindingResult.hasErrors()){
             return "cardholder/addNewCardholder";
         }
-        try {
-            cardholderService.addNewCardholder(cardholder);
-        } catch (CardholderAlreadyExistsException e) {
-            logger.error("Method: createCardholder, Cardholder "+cardholder.toString()+" already exists");
-            throw e;
-        }
+        cardholderService.addNewCardholder(cardholder);
         return "redirect:all";
     }
     @GetMapping("/{id}/update")
     String edit(@PathVariable("id") long id, Model model) throws CardholderNotFoundException {
-        try {
-            model.addAttribute("cardholder", cardholderService.getById(id));
-        } catch (CardholderNotFoundException e) {
-            logger.error("Method: edit, id = " + id +" , Cardholder not found");
-            throw e;
-        }
+        model.addAttribute("cardholder", cardholderService.getById(id));
         return "cardholder/edit";
     }
 
@@ -109,17 +84,13 @@ public class CardholderController {
         if(bindingResult.hasErrors()){
             return "cardholder/edit";
         }
-        try {
-            cardholderService.update(cardholder, id);
-        } catch (CardholderNotFoundException e) {
-            logger.error("Method: update, id = " + id +" , Cardholder not found");
-            throw e;
-        }
+        cardholderService.update(cardholder, id);
         return "redirect:all";
     }
 
     @ExceptionHandler
-    public String error(Exception e, Model model){
+    public String error(WebRequest webRequest, Exception e, Model model){
+        logger.error(webRequest.toString(), e);
         model.addAttribute("message", e.getMessage());
         return "exception";
     }
