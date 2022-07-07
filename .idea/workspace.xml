@@ -12,7 +12,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aa02383d-1c32-45fb-b314-87073e6c7512" name="Default Changelist" comment="controller test" />
+    <list default="true" id="aa02383d-1c32-45fb-b314-87073e6c7512" name="Default Changelist" comment="docker working!!!!">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mailer/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/mailer/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/test/java/Server/controller/CardControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/test/java/Server/controller/CardControllerTest.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -102,14 +106,16 @@
       <command value="mvn install:install-file -Dfile=out\artifacts\Entity\Entity.jar" />
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.CardControllerTest">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.CardControllerTest.byIdExistsTest">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -129,33 +135,33 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CardholderTest.getAndSetName" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CardControllerTest.all" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="server" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Server.POJO.*" />
+          <option name="PATTERN" value="Server.controller.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="Server.POJO" />
-      <option name="MAIN_CLASS_NAME" value="Server.POJO.CardholderTest" />
-      <option name="METHOD_NAME" value="getAndSetName" />
+      <option name="PACKAGE_NAME" value="Server.controller" />
+      <option name="MAIN_CLASS_NAME" value="Server.controller.CardControllerTest" />
+      <option name="METHOD_NAME" value="all" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CardholderTest.getCards" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CardControllerTest.byIdExistsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="server" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Server.POJO.*" />
+          <option name="PATTERN" value="Server.controller.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="Server.POJO" />
-      <option name="MAIN_CLASS_NAME" value="Server.POJO.CardholderTest" />
-      <option name="METHOD_NAME" value="getCards" />
+      <option name="PACKAGE_NAME" value="Server.controller" />
+      <option name="MAIN_CLASS_NAME" value="Server.controller.CardControllerTest" />
+      <option name="METHOD_NAME" value="byIdExistsTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -211,21 +217,21 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Spring Boot.Server" />
-      <item itemvalue="Spring Boot.Mailer" />
-      <item itemvalue="JUnit.CardholderTest.getCards" />
-      <item itemvalue="JUnit.CardholderTest.getAndSetName" />
       <item itemvalue="JUnit.CardholderTest.testToString" />
       <item itemvalue="JUnit.CardholderTest.testEquals" />
       <item itemvalue="JUnit.CardControllerTest" />
+      <item itemvalue="Spring Boot.Server" />
+      <item itemvalue="Spring Boot.Mailer" />
+      <item itemvalue="JUnit.CardControllerTest.all" />
+      <item itemvalue="JUnit.CardControllerTest.byIdExistsTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.CardControllerTest.byIdExistsTest" />
+        <item itemvalue="JUnit.CardControllerTest.all" />
         <item itemvalue="JUnit.CardControllerTest" />
         <item itemvalue="JUnit.CardholderTest.testEquals" />
         <item itemvalue="JUnit.CardholderTest.testToString" />
-        <item itemvalue="JUnit.CardholderTest.getAndSetName" />
-        <item itemvalue="JUnit.CardholderTest.getCards" />
       </list>
     </recent_temporary>
   </component>
@@ -262,7 +268,8 @@
       <workItem from="1656919171077" duration="15901000" />
       <workItem from="1657006746237" duration="18392000" />
       <workItem from="1657084483958" duration="44000" />
-      <workItem from="1657084549941" duration="9720000" />
+      <workItem from="1657084549941" duration="25621000" />
+      <workItem from="1657170535819" duration="4767000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1656422855772</created>
@@ -348,7 +355,35 @@
       <option name="project" value="LOCAL" />
       <updated>1657094646054</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="controller test">
+      <created>1657095251962</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1657095251962</updated>
+    </task>
+    <task id="LOCAL-00014" summary="controller test">
+      <created>1657095282658</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1657095282658</updated>
+    </task>
+    <task id="LOCAL-00015" summary="controller test">
+      <created>1657095402136</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1657095402136</updated>
+    </task>
+    <task id="LOCAL-00016" summary="docker working!!!!">
+      <created>1657104459024</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1657104459024</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -375,19 +410,8 @@
     <MESSAGE value="executable jars" />
     <MESSAGE value="images html" />
     <MESSAGE value="controller test" />
-    <option name="LAST_COMMIT_MESSAGE" value="controller test" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-field">
-          <url>file://$PROJECT_DIR$/server/src/test/java/Server/controller/CardControllerTest.java</url>
-          <line>17</line>
-          <properties field="template" class="Server.controller.CardControllerTest" />
-          <option name="timeStamp" value="10" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="docker working!!!!" />
+    <option name="LAST_COMMIT_MESSAGE" value="docker working!!!!" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/MailerServer$Server.ic" NAME="Server Coverage Results" MODIFIED="1657090204899" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
