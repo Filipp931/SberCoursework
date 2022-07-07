@@ -35,7 +35,10 @@
 <form th:method="GET" th:action="@{/cardholder/{id}/cards(id=${cardholder.getId()})}">
     <input style='width: 250px; border-radius: 8px; background-color: #4CAF50; '
            type="submit" value="Display cards" >
+</form><br>
+<form th:method="GET" th:action="@{/cardholder/delete}">
+    <button style='width: 250px; border-radius: 8px; background-color: #4CAF50; '
+            type="submit" name="id" th:value="${cardholder.getId()}" >Delete</button>
 </form>
-
 
 </html>

@@ -34,38 +34,40 @@ public class CardholderController {
     }
 
     @GetMapping("/{id}")
-    String byId(@PathVariable("id") long id, Model model) {
+    String byId(@PathVariable("id") long id, Model model) throws CardholderNotFoundException {
         Cardholder cardholder;
         try {
             cardholder = cardholderService.getById(id);
         } catch (CardholderNotFoundException e) {
             logger.warn("Method: byId, id = " + id +" , Card not found");
-            cardholder = new Cardholder();
+            throw e;
         }
         model.addAttribute("cardholder" ,cardholder);
         return "cardholder/byId";
     }
 
     @GetMapping("/{id}/cards")
-    String getCards(@PathVariable("id") long id, Model model) {
+    String getCards(@PathVariable("id") long id, Model model) throws CardholderNotFoundException {
         List<Card> cards;
         try {
             Cardholder cardholder = cardholderService.getById(id);
             cards = cardholder.getCards();
         } catch (CardholderNotFoundException e) {
             logger.error("Method: getCards, id = " + id +" , Cardholder not found");
-            cards = new ArrayList<>();
+            throw e;
         }
         model.addAttribute("cards", cards);
         return "card/all";
     }
 
     @GetMapping( "/delete")
-    void delete(@RequestParam long id)  {
+    String delete(@RequestParam long id) throws CardholderNotFoundException {
         try {
             cardholderService.delete(id);
+            return "redirect:all";
         } catch (CardholderNotFoundException e) {
             logger.error("Method: delete, id = " + id +" , Cardholder not found");
+            throw e;
         }
     }
 
@@ -77,7 +79,7 @@ public class CardholderController {
 
     @PostMapping("/create")
     String createCardholder(@ModelAttribute("cardholder") @Valid Cardholder cardholder,
-                            BindingResult bindingResult) {
+                            BindingResult bindingResult) throws CardholderAlreadyExistsException {
         if(bindingResult.hasErrors()){
             return "cardholder/addNewCardholder";
         }
@@ -85,15 +87,17 @@ public class CardholderController {
             cardholderService.addNewCardholder(cardholder);
         } catch (CardholderAlreadyExistsException e) {
             logger.error("Method: createCardholder, Cardholder "+cardholder.toString()+" already exists");
+            throw e;
         }
         return "redirect:all";
     }
     @GetMapping("/{id}/update")
-    String edit(@PathVariable("id") long id, Model model)  {
+    String edit(@PathVariable("id") long id, Model model) throws CardholderNotFoundException {
         try {
             model.addAttribute("cardholder", cardholderService.getById(id));
         } catch (CardholderNotFoundException e) {
             logger.error("Method: edit, id = " + id +" , Cardholder not found");
+            throw e;
         }
         return "cardholder/edit";
     }
@@ -101,7 +105,7 @@ public class CardholderController {
     @PostMapping("/{id}")
     String update(@Valid @ModelAttribute("cardholder")  Cardholder cardholder,
                   BindingResult bindingResult,
-                  @PathVariable long id) {
+                  @PathVariable long id) throws CardholderNotFoundException {
         if(bindingResult.hasErrors()){
             return "cardholder/edit";
         }
@@ -109,7 +113,14 @@ public class CardholderController {
             cardholderService.update(cardholder, id);
         } catch (CardholderNotFoundException e) {
             logger.error("Method: update, id = " + id +" , Cardholder not found");
+            throw e;
         }
         return "redirect:all";
+    }
+
+    @ExceptionHandler
+    public String error(Exception e, Model model){
+        model.addAttribute("message", e.getMessage());
+        return "exception";
     }
 }
