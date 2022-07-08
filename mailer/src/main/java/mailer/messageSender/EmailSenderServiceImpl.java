@@ -13,6 +13,12 @@ import java.nio.file.Paths;
 @Service
 public class EmailSenderServiceImpl implements EmailSenderService {
     private final Logger logger = (Logger) LogManager.getLogger(CardDao.class);
+
+    /**
+     * Отправка сообщения (в данном случае запись в файл)
+     * @param message сообщение
+     * @param email адрес для отправки
+     */
     @Override
     public void send(String message, String email) {
         try {
@@ -23,6 +29,12 @@ public class EmailSenderServiceImpl implements EmailSenderService {
         }
     }
 
+    /**
+     * Создание файла для записи сообщения
+     * @param fileName - имя файла без расширения
+     * @return - пцть к файлу
+     * @throws IOException - при ошибке чтения/записи
+     */
     private Path createFile(String fileName) throws IOException {
         Path directory = Paths.get("mail/");
         if(!Files.exists(directory)) {
