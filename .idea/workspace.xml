@@ -12,9 +12,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aa02383d-1c32-45fb-b314-87073e6c7512" name="Default Changelist" comment="cardController Test">
+    <list default="true" id="aa02383d-1c32-45fb-b314-87073e6c7512" name="Default Changelist" comment="presentation">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mailer/src/main/java/mailer/messageSender/EmailSenderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/mailer/src/main/java/mailer/messageSender/EmailSenderServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/Server/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/Server/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/Server/controller/CardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/Server/controller/CardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/Server/controller/CardholderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/Server/controller/CardholderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/Server/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/Server/controller/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/Server/controller/rest/MainRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/Server/controller/rest/MainRestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/target/classes/Server/POJO/Card.class" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/classes/Server/POJO/Card.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,17 +113,6 @@
     </option>
   </component>
   <component name="RunManager" selected="Spring Boot.Server">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="CardControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="server" />
       <extension name="coverage">
@@ -269,7 +263,8 @@
       <workItem from="1657084483958" duration="44000" />
       <workItem from="1657084549941" duration="25621000" />
       <workItem from="1657170535819" duration="22894000" />
-      <workItem from="1657257214734" duration="13724000" />
+      <workItem from="1657257214734" duration="16239000" />
+      <workItem from="1657603035709" duration="4498000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1656422855772</created>
@@ -411,7 +406,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657200672538</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="presentation">
+      <created>1657283736070</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1657283736070</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -442,7 +444,8 @@
     <MESSAGE value="testing with full spring context" />
     <MESSAGE value="cardholderController Test and exceptionHandler" />
     <MESSAGE value="cardController Test" />
-    <option name="LAST_COMMIT_MESSAGE" value="cardController Test" />
+    <MESSAGE value="presentation" />
+    <option name="LAST_COMMIT_MESSAGE" value="presentation" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>

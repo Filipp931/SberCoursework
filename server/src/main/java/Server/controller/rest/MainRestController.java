@@ -6,6 +6,10 @@ import Server.service.CardholderService;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+
+/**
+ * контроллер, отвечающий за API
+ */
 @RequestMapping("/rest")
 @RestController
 public class MainRestController {
@@ -17,6 +21,10 @@ public class MainRestController {
         this.cardService = cardService;
     }
 
+    /**
+     * получение списка всех просроченных карт в Json формате
+     * @return - JSON список
+     */
     @GetMapping("/getAllExpiredCards")
     List<Card> getAllExpiredCards()  {
         return cardService.getAllExpired();

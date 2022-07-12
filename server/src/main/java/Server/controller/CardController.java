@@ -41,7 +41,7 @@ public class CardController {
     }
     /**
      * Получение карты по ее Id
-     * @param id
+     * @param id - id карты
      * @return card
      */
     @GetMapping("/{id}")
@@ -50,12 +50,24 @@ public class CardController {
         return "card/byId";
     }
 
+    /**
+     * удаление карты по ID
+     * @param id - ID
+     * @return перенаправление на страницу со списком всех карт
+     * @throws CardNotFoundException - если неверный ID
+     */
     @GetMapping("/{id}/delete")
     String delete(@PathVariable("id") long id) throws CardNotFoundException {
         cardService.delete(id);
         return "redirect:card/all";
     }
 
+    /**
+     * Страница создания новой карты
+     * @param cardholderId - ID владельца
+     * @return перенаправление данных на create
+     * @throws CardholderNotFoundException - при неверном id
+     */
     @GetMapping("/addNewCard{id}")
     String newCard(@PathVariable("id") long cardholderId, Model model) throws CardholderNotFoundException {
         Card card = new Card();
@@ -64,6 +76,14 @@ public class CardController {
         return "card/addNewCard";
     }
 
+    /**
+     * создание новой карты
+     * @param card - карта
+     * @param bindingResult - ошибки в бине Card
+     * @return  перенаправление на страницу со списком всех карт
+     * @throws CardholderNotFoundException - при неверном Id владельца
+     * @throws CardAlreadyExistsException - если карта с таким number существует в базе
+     */
     @PostMapping("/create")
     String createCard(@ModelAttribute("card") @Valid Card card, BindingResult bindingResult) throws CardholderNotFoundException, CardAlreadyExistsException {
         if(bindingResult.hasErrors()) {
@@ -73,6 +93,12 @@ public class CardController {
         return "redirect:all";
     }
 
+    /**
+     * Обработка исключений (визуализация сообщения)
+     * @param webRequest - запрос в котором произошла ошибка
+     * @param e - ошибка
+     * @return страница с выводом текста ошибки
+     */
     @ExceptionHandler
     public String error(WebRequest webRequest, Exception e, Model model){
         logger.error(webRequest.toString(), e);

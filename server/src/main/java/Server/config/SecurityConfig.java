@@ -13,10 +13,16 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 import org.springframework.security.web.SecurityFilterChain;
 
-
+/**
+ * Настройка Spring Security
+ */
 @Configuration
 @EnableWebSecurity
 public class SecurityConfig {
+    /**
+     * Определение страниц и прав доступа к ним (на любую страницу нужна авторизация)
+     * Добавление стандартной формы Login
+     */
     @Bean
     protected SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         http
@@ -28,6 +34,9 @@ public class SecurityConfig {
         return  http.build();
     }
 
+    /**
+     * создание бзового пользователя типа InMemory
+     */
     @Bean
     protected UserDetailsService userDetailsService(){
         InMemoryUserDetailsManager userDetailsService = new InMemoryUserDetailsManager();
