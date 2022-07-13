@@ -12,15 +12,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aa02383d-1c32-45fb-b314-87073e6c7512" name="Default Changelist" comment="presentation">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/Server/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/Server/config/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/Server/controller/CardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/Server/controller/CardController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/Server/controller/CardholderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/Server/controller/CardholderController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/Server/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/Server/controller/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/Server/controller/rest/MainRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/Server/controller/rest/MainRestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/target/classes/Server/POJO/Card.class" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/classes/Server/POJO/Card.class" afterDir="false" />
-    </list>
+    <list default="true" id="aa02383d-1c32-45fb-b314-87073e6c7512" name="Default Changelist" comment="javaDoc" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -264,7 +256,7 @@
       <workItem from="1657084549941" duration="25621000" />
       <workItem from="1657170535819" duration="22894000" />
       <workItem from="1657257214734" duration="16239000" />
-      <workItem from="1657603035709" duration="4498000" />
+      <workItem from="1657603035709" duration="4630000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1656422855772</created>
@@ -413,7 +405,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657283736070</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="javaDoc">
+      <created>1657637281694</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1657637281694</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -445,7 +444,8 @@
     <MESSAGE value="cardholderController Test and exceptionHandler" />
     <MESSAGE value="cardController Test" />
     <MESSAGE value="presentation" />
-    <option name="LAST_COMMIT_MESSAGE" value="presentation" />
+    <MESSAGE value="javaDoc" />
+    <option name="LAST_COMMIT_MESSAGE" value="javaDoc" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>
