@@ -12,12 +12,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aa02383d-1c32-45fb-b314-87073e6c7512" name="Default Changelist" comment="Update presentation">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/Server/controller/CardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/Server/controller/CardController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/Server/service/CardService.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/Server/service/CardService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/Server/service/CardholderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/Server/service/CardholderService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/target/classes/Server/controller/CardController.class" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/classes/Server/controller/CardController.class" afterDir="false" />
+    <list default="true" id="aa02383d-1c32-45fb-b314-87073e6c7512" name="Default Changelist" comment="JavaDoc">
+      <change beforePath="$PROJECT_DIR$/server/src/main/resources/templates/credit-card-payment.png" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/resources/static/credit-card-payment.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/resources/templates/mainView.html" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/resources/templates/mainView.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/resources/templates/people.png" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/resources/static/people.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/target/classes/Server/POJO/Card.class" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/classes/Server/POJO/Card.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/target/classes/Server/config/SecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/classes/Server/config/SecurityConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/target/classes/Server/controller/CardholderController.class" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/classes/Server/controller/CardholderController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/target/classes/Server/controller/MainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/classes/Server/controller/MainController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/target/classes/Server/controller/rest/MainRestController.class" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/classes/Server/controller/rest/MainRestController.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,6 +114,17 @@
     </option>
   </component>
   <component name="RunManager" selected="Spring Boot.Server">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="CardControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="server" />
       <extension name="coverage">
@@ -264,7 +278,7 @@
       <workItem from="1657257214734" duration="16239000" />
       <workItem from="1657603035709" duration="4630000" />
       <workItem from="1657690171386" duration="174000" />
-      <workItem from="1657781365450" duration="1491000" />
+      <workItem from="1657781365450" duration="2135000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1656422855772</created>
@@ -427,7 +441,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657690331449</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="JavaDoc">
+      <created>1657782891137</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1657782891137</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -461,7 +482,8 @@
     <MESSAGE value="presentation" />
     <MESSAGE value="javaDoc" />
     <MESSAGE value="Update presentation" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update presentation" />
+    <MESSAGE value="JavaDoc" />
+    <option name="LAST_COMMIT_MESSAGE" value="JavaDoc" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>
