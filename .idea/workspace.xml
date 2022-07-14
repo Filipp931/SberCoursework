@@ -12,7 +12,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aa02383d-1c32-45fb-b314-87073e6c7512" name="Default Changelist" comment="javaDoc" />
+    <list default="true" id="aa02383d-1c32-45fb-b314-87073e6c7512" name="Default Changelist" comment="Update presentation">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/Server/controller/CardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/Server/controller/CardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/Server/service/CardService.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/Server/service/CardService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/Server/service/CardholderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/Server/service/CardholderService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/target/classes/Server/controller/CardController.class" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/classes/Server/controller/CardController.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -257,6 +263,8 @@
       <workItem from="1657170535819" duration="22894000" />
       <workItem from="1657257214734" duration="16239000" />
       <workItem from="1657603035709" duration="4630000" />
+      <workItem from="1657690171386" duration="174000" />
+      <workItem from="1657781365450" duration="1491000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1656422855772</created>
@@ -412,7 +420,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657637281694</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Update presentation">
+      <created>1657690331449</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1657690331449</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -445,7 +460,8 @@
     <MESSAGE value="cardController Test" />
     <MESSAGE value="presentation" />
     <MESSAGE value="javaDoc" />
-    <option name="LAST_COMMIT_MESSAGE" value="javaDoc" />
+    <MESSAGE value="Update presentation" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update presentation" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>

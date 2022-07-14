@@ -59,7 +59,7 @@ public class CardController {
     @GetMapping("/{id}/delete")
     String delete(@PathVariable("id") long id) throws CardNotFoundException {
         cardService.delete(id);
-        return "redirect:card/all";
+        return "redirect:all";
     }
 
     /**
